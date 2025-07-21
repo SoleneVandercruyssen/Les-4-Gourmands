@@ -4,7 +4,7 @@ services:
     depends_on:
       - bddsql
       - bddnosql
-    container_name: Les 4 Gourmands
+    container_name: Les4Gourmands
     ports:
       - "8089:80"
     volumes:
@@ -14,10 +14,9 @@ services:
       - DB_HOST=bddsql
       - DB_USER=creer
       - DB_PASSWORD=boulangerie
-      - DB_NAME=Les 4 Gourmands
+      - DB_NAME=Les4Gourmands
       # - MA_MOYENNE_VARIABLE=bidule
     restart: always
-
 
   bddsql:
     image: mariadb
@@ -29,15 +28,15 @@ services:
       - DB_HOST=bddsql
       - DB_USER=creer
       - DB_PASSWORD=boulangerie
-      - DB_NAME=les 4 gourmands
-    container_name: serverMaria
+      - DB_NAME=les4gourmands
+    container_name: serverMaria2
     restart: always
     
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
-      - "809:80"
-    container_name: serverPHPMyAdmin2025
+      - "8099:80"
+    container_name: serverPHPMyAdmin20252
     restart: unless-stopped
     depends_on:
       - bddsql
@@ -48,7 +47,7 @@ services:
 
   bddnosql:
       image: mongo 
-      container_name: serverMongoDB2025
+      container_name: serverMongoDB20252
       ports:
         - "27018:27018"
       restart: always
