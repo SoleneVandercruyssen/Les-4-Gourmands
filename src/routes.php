@@ -5,13 +5,13 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // Selon la valeur de "$uri", on entre dans un des cas du switch :
   switch ($uri) {
     case '/':
-      require __DIR__ . '/..views/home.php';
+      require __DIR__ . '/../views/home.php';
       break;
     case '/':
-      require __DIR__ .'/..controllers';
+      require __DIR__ .'/../controllers';
       break;
       case '/':
-        require __DIR__ .'/..models';
+        require __DIR__ .'/../models';
         break;
     default:
       http_response_code(404);
