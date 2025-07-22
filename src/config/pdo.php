@@ -1,7 +1,8 @@
 <?php 
 /**
  * Retourne une instance de connexion PDO pour se connecter à la BDD "boulangerie"
- *
+ * PDO = (PHP Data Object)
+ * Pour se connecter, PDO demande un DSN (Data Source Name) 
  * @return \PDO
  */
 function connexionPDO(): \PDO
@@ -10,6 +11,10 @@ function connexionPDO(): \PDO
     {
         // Je récupère ma configuration :
         $config = require __DIR__."/../config/blogconfig.php";
+        /* 
+        C'est un string contenant toute les informations pour localiser la BDD.
+        * {pilote}:host={adresse};port={port de connexion};dbname={nom de la bdd};charset={charset à utiliser}
+        */
         // Je construit mon DSN :
         $dsn = "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset={$config['charset']}";
         // Je crée mon instance de PDO :
