@@ -4,7 +4,7 @@ require __DIR__ . '/src/routes.php';
 
 ?>
 
-<p>bonjour</p>
+<!-- <p>bonjour</p> -->
 
 
 <?php 

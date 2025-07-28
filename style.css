@@ -15,35 +15,55 @@
 }
 
 
-
-
-
+@media screen and (min-width: 360px) and (max-width: 990px) {
 
 header{
   border: 2px solid red;
-  width: 100%;
+  width: 50%;
   height: 8vh;
   background-color: grey;
 }
 
-header ul 
-{
-  border: 2px dotted black;
-  width: fit-content;
-}
-
-header ul li {
-  width: 30px;
-  list-style: none;
-}
-
-header ul li a {
-  width: 30px;
-  text-decoration: none;
-}
+  header ul li {
+    width: 20px;
+    list-style: none;
+  }
+  
+  header ul li a {
+    width: 20px;
+    text-decoration: none;
+  }
+  
+.burger-line{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 4px auto;
+  }
+  
+  .burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .burger:hover {
+    background-color: lightgrey;
+  }
+  
+  .burger:hover .burger-line {
+    background-color: red;
+  }
 
 footer{
+  position: fixed;
+  top: 100%;
   width: 100%;
   height: 8vh;
   background-color: red;
 }
+}
+
+
+
