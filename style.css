@@ -14,6 +14,20 @@
   src: url(./src/fonts/Encode_Sans_Semi_Expanded/EncodeSansSemiExpanded-Regular.ttf);
 }
 
+/* ? Couleurs */
+
+:root {
+    --grey: #989898;
+    --red: #AB3428;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Unna, sans-serif;
+  background-color: white;
+}
+
 
 @media screen and (min-width: 360px) and (max-width: 990px) {
 
@@ -21,7 +35,6 @@ body{
   width: 100%;
   height: 100vh;
 }
-
 
   .logo_img {
     width: 24px;
@@ -81,7 +94,6 @@ header{
   .burger:hover .burger-line {
     background-color: red;
   }
-
 
 .home {
   position: relative;
@@ -171,15 +183,111 @@ header{
   color: black;
 }
 
+
+.home-contact{
+  width: 100%;
+  height: 30vh;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-family: Unna, sans-serif;
+    font-size: 1.5rem;
+    margin-right: 20px;
+  }
+}
+
+.tel{
+  font-size: bolder;
+  color: #AB3428;
+  font-family: Unna, sans-serif;
+  font-size: 1.5rem;
+}
+
+
+
+/* ! FOOTER  = BAS DE PAGE */
+
 footer{
-  position: fixed;
   top: 100%;
   width: 100%;
-  height: 8vh;
-  background-color: red;
+  height: 20vh;
+  background-color: black;
 }
 
+footer ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 0;
+  }
+  
+  footer li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  footer li a {
+    text-decoration: none;
+    color: white;
+  }
+
+
+/* 
+  DIV qui contient les DIV LIENFOOTER et DIV COPYRIGHT
+  Elle est appelée mirror car elle place les deux DIV face à face
+*/
+#mirror{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+/* DIV placer à gauche */
+.liens_footer{
+  float: left;
+  width: 50%;
+  border: 2px solid violet;
+}
+
+/* DIV placer à droite */
+.copyright{
+  width: 50%;
+  float: right;
+  margin-right: 5%;
+  margin-top: 2%;
+  border: 2px solid orange;
+}
+
+.face-to-face{
+  display: flex;
+  align-items: center;
+}
+
+/* Icons Footer */
+#phone, #facebook{
+  width: 30px;
+  height: 30px;
+}
+
+#email{
+  width: 20px;
+  height: 20px;
+}
+
+/* Paragraphes du footer */
+footer  p{
+  color: white;
+  font-family: Encode, sans-serif;
+  font-size: 0.8rem;
 }
 
 
-
+}

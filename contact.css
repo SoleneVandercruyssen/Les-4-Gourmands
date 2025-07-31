@@ -13,3 +13,123 @@
   font-family: Encode;
   src: url(./src/fonts/Encode_Sans_Semi_Expanded/EncodeSansSemiExpanded-Regular.ttf);
 }
+
+/* ? Couleurs */
+
+:root {
+    --grey: #989898;
+    --red: #AB3428;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Unna, sans-serif;
+  background-color: white;
+}
+@media screen and (min-width: 360px) and (max-width: 990px) {
+
+
+body{
+  width: 100%;
+  height: 100vh;
+}
+
+  .logo_img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .home_img{
+    width: 100%;
+    height: 30vh;
+  }
+
+header{
+  width: 100%;
+  height: 8vh;
+  background-color: black;
+}
+
+  header ul li {
+    width: 20px;
+    list-style: none;
+  }
+  
+  header ul li a {
+    width: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+
+  .burger-container{
+    position: absolute;
+    top: 3vh;
+    left: 85%;
+    width: 10%;
+    height: 8vh; 
+    cursor: pointer;
+  }
+
+.burger-line{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px auto;
+  }
+  
+  .burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .burger:hover {
+    background-color: lightgrey;
+  }
+  
+  .burger:hover .burger-line {
+    background-color: red;
+  }
+
+.contact {
+  position: relative;
+}
+
+/* Image en fond */
+.contact_img {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  z-index: 1; /* tout en dessous */
+}
+
+/* Bloc gris de fond pour le titre */
+.background {
+  background-color: grey;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 90%;
+  height: 15vh;
+  opacity: 0.7;
+  z-index: 2; /* devant l’image */
+}
+
+/* Titre au-dessus de tout */
+#title-contact {
+  width: 350px;
+  position: absolute;
+  top: 80px; /* pour qu’il apparaisse sur le fond gris */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: Unna, sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  z-index: 3; /* au-dessus du fond gris */
+}
+
+}
