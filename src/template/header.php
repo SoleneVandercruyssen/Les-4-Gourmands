@@ -19,23 +19,22 @@ if (session_status() === PHP_SESSION_NONE) {
     <title>Les quatre gourmands</title>
     <!-- HEADER + HOME -->
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="/JS/script.js"></script>
-    <script type="module" src="/JS/flèche.js"></script>
+    <!-- <script type="module" src="/JS/script.js"></script>
+    <script type="module" src="/JS/flèche.js"></script> -->
     <!-- Contact -->
     <!-- A propos -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="/JS/cards.js" defer></script>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="/JS/cards.js" defer></script> -->
 </head>
 
-<!-- Ajout d'une classe qui contient une variable "$pageBodyClass" -->
-<body class="<?php echo ($pageBodyClass ?? 'white') . (!empty($isPlateforme)); ?>">
+
 <!-- ! Menu burger  -->
 <header>
     <div id="flex">
         <div class="logo">
-            <img src="./images/Logo des 4 Gourmands.png" alt="logo de l'entreprise" class= "logo_img">
+            <img src="./src/images/Logo des 4 Gourmands.png" alt="logo de l'entreprise" class= "logo_img">
         </div>
-        
+
     </div>
     <input type="checkbox" id="burger-toggle" hidden>
     
@@ -47,24 +46,13 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="nav">
     <nav>
         <div class="nav-menu">
-            <?php if (!empty($isPlateforme)): ?>
                 <!-- From Uiverse.io by Lealdos --> 
-
-                <form action="/logout" method="post" style="display:inline;">
-                <button type="submit" id="disconnect"> 
-                    <span class="icon"> </span>
-                    <span class="text">Logout</span>                     
-                </button>
-                </form>
-
-            <?php else: ?>
                 <ul>
                     <li><a href="/home">Home</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/formations">Formations</a></li>
+                    <li><a href="/nos produits">Nos Produits</a></li>
+                    <li><a href="/apropos">A propos</a></li>
                 </ul>
-            <?php endif; ?>
         </div>
     </nav>
 </div>
