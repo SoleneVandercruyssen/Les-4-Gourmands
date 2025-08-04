@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 
+/* TITRES */
 @font-face {
   font-family: Unna;
   src: url(./src/fonts/Unna/Unna-Regular.ttf);
 }
 
+/* CORPS */
 @font-face {
   font-family: Encode;
   src: url(./src/fonts/Encode_Sans_Semi_Expanded/EncodeSansSemiExpanded-Regular.ttf);
@@ -122,15 +124,86 @@ header{
 #title-contact {
   width: 350px;
   position: absolute;
-  top: 80px; /* pour qu’il apparaisse sur le fond gris */
+  top: 60px; /* pour qu’il apparaisse sur le fond gris */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  font-family: Unna, sans-serif;
-  font-size: 1.5rem;
-  color: black;
+  font-family: Unna;
+  font-size: bold;
+  /* font-size: 1.5rem; */
+  color: white;
   z-index: 3; /* au-dessus du fond gris */
 }
+
+.coordonnées {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.coordonnées_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tel{
+  font-size: bolder;
+  color: #AB3428;
+  font-family: Unna, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 4%;
+}
+
+.paiement {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #989898;
+  border-radius: 8px;
+
+ul {
+  margin-left: 15%;
+  margin-top: 5%;
+  padding: 0;}
+
+
+}
+
+.accès {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #989898;
+  border-radius: 8px;
+}
+
+h2{
+  color: #AB3428;
+  font-family: Unna, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2%;
+}
+
+.carte {
+  position: relative;
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+iframe{
+  width: 300px;
+  height: 300px;
+  border: 0;
+}
+
+
 
 /* ! FOOTER  = BAS DE PAGE */
 
@@ -176,7 +249,6 @@ footer ul {
 /* DIV placer à gauche */
 .liens_footer{
   width: 35%;
-  border: 2px solid violet;
   margin-right: 2%;
 }
 

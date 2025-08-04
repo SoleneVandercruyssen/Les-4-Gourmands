@@ -257,17 +257,16 @@ footer ul {
 /* DIV placer à gauche */
 .liens_footer{
   width: 35%;
-  border: 2px solid violet;
   margin-right: 2%;
 }
 
 /* DIV placer à droite */
 .copyright{
   width: 65%;
-  float: right;
   margin-top: 2%;
   border: 2px solid orange;
 }
+
 
 .face-to-face{
   display: flex;
