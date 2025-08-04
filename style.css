@@ -165,16 +165,16 @@ header{
   border: 2px solid blue;
   width: 100%;
   height: 100%;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
 
 .card_img{
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
+  width: 140px;
+  height: 140px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 
 .button_produit{
   width: 140px;
@@ -182,7 +182,6 @@ header{
   background-color: #AB3428;
   color: black;
 }
-
 
 .home-contact{
   width: 100%;
@@ -198,6 +197,295 @@ header{
     margin-right: 20px;
   }
 }
+
+.en-dessous{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.tel{
+  font-size: bolder;
+  color: #AB3428;
+  font-family: Unna, sans-serif;
+  font-size: 1.5rem;
+}
+
+
+/* ! FOOTER  = BAS DE PAGE */
+
+footer{
+  top: 100%;
+  width: 100%;
+  height: 20vh;
+  background-color: black;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 0;
+  }
+  
+  footer li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  footer li a {
+    text-decoration: none;
+    color: white;
+  }
+
+/* 
+  DIV qui contient les DIV LIENFOOTER et DIV COPYRIGHT
+  Elle est appelée mirror car elle place les deux DIV face à face
+*/
+#mirror{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin-left: 1%;
+  margin-top: 2%;
+}
+
+/* DIV placer à gauche */
+.liens_footer{
+  width: 35%;
+  border: 2px solid violet;
+  margin-right: 2%;
+}
+
+/* DIV placer à droite */
+.copyright{
+  width: 65%;
+  float: right;
+  margin-top: 2%;
+  border: 2px solid orange;
+}
+
+.face-to-face{
+  display: flex;
+  align-items: center;
+}
+
+/* Icons Footer */
+#phone, #facebook{
+  width: 30px;
+  height: 30px;
+}
+
+#email{
+  width: 20px;
+  height: 20px;
+}
+#mail{
+  margin-right: 8%;
+}
+
+/* Paragraphes du footer */
+footer  p{
+  color: white;
+  font-family: Encode, sans-serif;
+  font-size: 0.8rem;
+}
+
+
+}
+
+/* Version desktop */
+
+
+@media screen and (min-width: 991px) {
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Unna, sans-serif;
+  background-color: white;
+  font-size: 1.8rem;
+}
+
+.logo_img {
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    left: 5%;
+  }
+
+  .home_img{
+    width: 100%;
+    height: 50vh;
+  }
+
+header{
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+}
+
+  header ul li {
+    position: relative;
+    width: 100px; 
+    list-style: none;
+  }
+  
+  header ul li a {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+  }
+  
+
+  .burger-container{
+    display: none;
+    position: absolute;
+    top: 3vh;
+    left: 85%;
+    width: 10%;
+    height: 8vh; 
+    cursor: pointer;
+  }
+
+.burger-line{
+    display: none;
+    /* width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px auto; */
+  }
+  
+  .burger {
+    display: none;
+    /* flex-direction: column;
+    align-items: center;
+    cursor: pointer; */
+  }
+  
+  .burger:hover {
+    background-color: lightgrey;
+  }
+  
+  .burger:hover .burger-line {
+    background-color: red;
+  }
+
+.home {
+  position: relative;
+}
+
+/* Image en fond */
+.home_img {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  z-index: 1; /* tout en dessous */
+}
+
+/* Bloc gris de fond pour le titre */
+.background {
+  background-color: grey;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  width: 90%;
+  height: 15vh;
+  opacity: 0.7;
+  z-index: 2; /* devant l’image */
+}
+
+/* Titre au-dessus de tout */
+#title-home {
+  width: 350px;
+  position: absolute;
+  top: 80px; /* pour qu’il apparaisse sur le fond gris */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: Unna, sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  z-index: 3; /* au-dessus du fond gris */
+}
+
+
+/* Section en dessous de l'image */
+
+.text{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 8%;
+}
+
+/* Section display images */
+
+.home_section{
+  width: 100%;
+  height: 70vh;
+  justify-content: center;
+  padding: 3%;
+  border: 2px solid hotpink;
+}
+
+.home_section_content{
+  width: 100%;
+  height: 60vh;
+  background-color: #AB3428;
+  border: 2px solid lawngreen;
+}
+
+
+.home_section_images{
+  padding: 5%;
+  border: 2px solid blue;
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.card_img{
+  width: 340px;
+  height: 340px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button_produit{
+  width: 140px;
+  height: 40px;
+  background-color: #AB3428;
+  color: black;
+}
+
+.home-contact{
+  width: 100%;
+  height: 30vh;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-family: Unna, sans-serif;
+    font-size: 1.5rem;
+    margin-right: 20px;
+  }
+}
+
+.en-dessous{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .tel{
   font-size: bolder;
@@ -237,7 +525,6 @@ footer ul {
     color: white;
   }
 
-
 /* 
   DIV qui contient les DIV LIENFOOTER et DIV COPYRIGHT
   Elle est appelée mirror car elle place les deux DIV face à face
@@ -246,22 +533,21 @@ footer ul {
   display: flex;
   justify-content: center;
   align-items: left;
-  margin-left: 5%;
+  margin-left: 1%;
   margin-top: 2%;
 }
 
 /* DIV placer à gauche */
 .liens_footer{
-  float: left;
-  width: 50%;
+  width: 35%;
   border: 2px solid violet;
+  margin-right: 2%;
 }
 
 /* DIV placer à droite */
 .copyright{
-  width: 50%;
+  width: 65%;
   float: right;
-  margin-right: 5%;
   margin-top: 2%;
   border: 2px solid orange;
 }
@@ -281,6 +567,9 @@ footer ul {
   width: 20px;
   height: 20px;
 }
+#mail{
+  margin-right: 8%;
+}
 
 /* Paragraphes du footer */
 footer  p{
@@ -288,6 +577,5 @@ footer  p{
   font-family: Encode, sans-serif;
   font-size: 0.8rem;
 }
-
 
 }
