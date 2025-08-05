@@ -12,7 +12,7 @@
     <meta name="og-url" content="">
     <meta name="robots" content="noindex, nofollow">
     <title>Les quatre gourmands</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nosproduits.css">
     <script type="module" src="/JS/script.js"></script>
 </head>
 
@@ -20,30 +20,27 @@
 <header>
     <div id="flex">
         <div class="logo">
-            <img src="./src/images/Logo des 4 Gourmands.png" alt="logo de l'entreprise" class= "logo_img">
+            <img src="./src/images/Logo des 4 Gourmands.png" alt="logo de l'entreprise" class="logo_img">
         </div>
     </div>
-    <input type="checkbox" id="burger-toggle" hidden>
-    
-    <label for="burger-toggle" class="burger-container">
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-    </label>
 
-    <div class="nav">
-    <nav>
-        <div class="nav-menu">
-                <!-- From Uiverse.io by Lealdos --> 
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./nos produits">Nos Produits</a></li>
-                    <li><a href="./contact">Contact</a></li>
-                    <li><a href="./apropos">A propos</a></li>
-                </ul>
-        </div>
-    </nav>
-</div>
+    <!-- Bouton burger -->
+    <div class="burger-container" id="burger-btn">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+
+    <!-- Menu -->
+    <div class="nav" id="nav-menu">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./nosproduits.html">Nos Produits</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./apropos.html">A propos</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -75,17 +72,17 @@
 
             <div class="copyright">
             <div class="face-to-face">
-            <img src="/src/images/icons8-message-50.png" id="email" alt="icône mail">
+            <img  src="/src/images/icons8-message-50.png" id="email" alt="icône mail">
             <p id="mail">lesquatregourmands@gmail.com</p>
             </div>
             <div class="face-to-face">
-            <img src="/src/images/icons8-téléphone-débranché-30(1).png" id="phone" alt="icône phone">
+            <img src="/src/images/icons8-téléphone-débranché-30.png" id="phone" alt="icône phone">
             <p id="tel"> 03.59.89.95.99</p>
             </div>
             <div class="face-to-face">
             <a href="https://www.facebook.com/les4gourmands/?locale=fr_FR"><img src="/src/images/icons8-facebook-50(1).png" id="facebook" alt="icône facebook"></a>
             </div>
-            <p> 2025 © Les quatre Gourmands</p>
+            <p>2025 © Les quatre gourmands</p>
             <p>Tous droits réservés</p>
         </div>
         </div>

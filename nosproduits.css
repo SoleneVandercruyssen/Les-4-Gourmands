@@ -27,3 +27,174 @@ body {
   font-family: Unna, sans-serif;
   background-color: white;
 }
+
+
+@media screen and (min-width: 360px) and (max-width: 990px) {
+  body{
+  width: 100%;
+  height: 100vh;
+}
+
+  .logo_img {
+    margin-top: 4%;
+    margin-left: 4%;
+    width: 44px;
+    height: 44px;
+  }
+
+
+/* HEADER */
+header {
+    position: relative;
+    height: 8vh;
+    background-color: black;
+}
+
+/* Bouton burger */
+.burger-container {
+    position: absolute;
+    top: 2vh;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.burger-line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s ease;
+}
+
+/* Menu caché par défaut */
+.nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: black;
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 50px 20px;
+}
+
+.nav ul li {
+    margin: 20px 0;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Quand le menu est actif */
+.nav.active {
+    right: 0;
+}
+
+/* Animation burger en croix */
+.burger-container.active .burger-line:nth-child(1) {
+    transform: rotate(40deg) translate(10px, 10px);
+}
+
+.burger-container.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-container.active .burger-line:nth-child(3) {
+    transform: rotate(-40deg) translate(6px, -6px);
+}
+
+/* ! FOOTER  = BAS DE PAGE */
+
+footer{
+  top: 100%;
+  width: 100%;
+  height: 20vh;
+  background-color: black;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 0;
+  }
+  
+  footer li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  footer li a {
+    text-decoration: none;
+    color: white;
+  }
+
+/* 
+  DIV qui contient les DIV LIENFOOTER et DIV COPYRIGHT
+  Elle est appelée mirror car elle place les deux DIV face à face
+*/
+#mirror{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin-left: 1%;
+  margin-top: 2%;
+}
+
+/* DIV placer à gauche */
+.liens_footer{
+  width: 35%;
+  margin-right: 2%;
+}
+
+/* DIV placer à droite */
+.copyright{
+  width: 65%;
+  margin-top: 2%;
+  border: 2px solid orange;
+}
+
+
+.face-to-face{
+  display: flex;
+  align-items: center;
+}
+
+/* Icons Footer */
+#phone, #facebook{
+  width: 30px;
+  height: 30px;
+}
+
+#email{
+  width: 20px;
+  height: 20px;
+}
+#mail{
+  margin-right: 8%;
+}
+
+/* Paragraphes du footer */
+footer  p{
+  color: white;
+  font-family: Encode, sans-serif;
+  font-size: 0.8rem;
+}
+
+
+}

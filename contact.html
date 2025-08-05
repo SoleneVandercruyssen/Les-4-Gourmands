@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name= "description" content="Les quatre gourmands">
     <meta name="type" content="site web">
-    <meta name="keywords" content="boulangerie, pâtisserie, vienoiseries, gâteau, pain, nourriture, Emmerin">
+    <meta name="keywords" content="boulangerie, pâtisserie, vienoiseries, gâteau, pain, nourriture, Emmerin, gourmandises">
     <meta name="author" content="Solène Vandercruyssen">
     <meta name="og:title" content="Les quatre gourmands">
     <meta name="og:site_name" content="Les quatre gourmands">
@@ -16,37 +16,34 @@
     <script type="module" src="/JS/script.js"></script>
 </head>
 
+
 <!-- ! Menu burger  -->
 <header>
     <div id="flex">
         <div class="logo">
-            <img src="./src/images/Logo des 4 Gourmands.png" alt="logo de l'entreprise" class= "logo_img">
+            <img src="./src/images/Logo des 4 Gourmands.png" alt="logo de l'entreprise" class="logo_img">
         </div>
     </div>
-    <input type="checkbox" id="burger-toggle" hidden>
-    
-    <label for="burger-toggle" class="burger-container">
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-    </label>
 
-    <div class="nav">
-    <nav>
-        <div class="nav-menu">
-                <!-- From Uiverse.io by Lealdos --> 
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./nos produits">Nos Produits</a></li>
-                    <li><a href="./contact">Contact</a></li>
-                    <li><a href="./apropos">A propos</a></li>
-                </ul>
-        </div>
-    </nav>
-</div>
+    <!-- Bouton burger -->
+    <div class="burger-container" id="burger-btn">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+
+    <!-- Menu -->
+    <div class="nav" id="nav-menu">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./nosproduits.html">Nos Produits</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./apropos.html">A propos</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
-
 
 <body>
 <main> 
@@ -68,7 +65,7 @@
     <div class="horaires">
         <p>Du Lundi au Dimanche </p>
         <p class="de" >de</p>  
-        <p> <strong> 7H00 </strong>à <strong> 20H00</strong></p>
+        <p class="heures"> 7H00 à 20H00</p>
     </div>
 </div>
 </section>
@@ -88,12 +85,12 @@
 <section class="accès">
 <h2>Moyens d'accès :</h2>
 <br>
-<p> La Boulangerie des 4 Gourmands est idéalement située au cœur du village d'Emmerin, <strong>à quelques minutes seulement de Lille</strong>. Facilement accessible, elle se trouve à proximité de la mairie et de l'église, dans un quartier calme et convivial. 
+<p> La Boulangerie des quatre gourmands est idéalement située au cœur du village d'Emmerin, <strong>à quelques minutes seulement de Lille</strong>. Facilement accessible, elle se trouve à proximité de la mairie et de l'église, dans un quartier calme et convivial. 
 Que vous soyez du coin ou de passage dans la région, cette boulangerie artisanale est un véritable repère pour les amateurs de bon pain, de viennoiseries croustillantes et de pâtisseries maison.</p>
 <br>
 <p>Stationnement facile à proximité, arrêt de bus (<strong>Delory</strong>) à deux pas.</p>
 <br>
-<p>Tout est fait pour que votre visite soit un moment de gourmandise sans contrainte.</p>
+<p class="encode">Tout est fait pour que votre visite soit un moment de gourmandise sans contrainte.</p>
 </section>
 
 
