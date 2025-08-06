@@ -23,3 +23,10 @@ document.addEventListener('click', (event) => {
         navMenu.classList.remove('active'); // Enlève la classe "active"
     }
 });
+
+
+
+// Affiche la section contact au chargement de la page
+window.addEventListener('load', () => {
+    document.querySelector('.contact, .index').classList.add('show');
+});

@@ -157,6 +157,7 @@ header {
 }
 
 /* Bloc gris de fond pour le titre */
+
 .background {
   background-color: grey;
   position: absolute;
@@ -168,6 +169,37 @@ header {
   z-index: 2; /* devant l’image */
 }
 
+/* État initial : décalé vers le bas et transparent */
+.background,
+#title-home {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* État final : en place et visible */
+.show .background,
+.show #title-home {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Titre au-dessus de tout */
+#title-home {
+  width: 350px;
+  position: absolute;
+  top: 60px; /* pour qu’il apparaisse sur le fond gris */
+  left: 2%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: Unna;
+  font-size: bold;
+  color: white;
+  z-index: 3; /* au-dessus du fond gris */
+}
+
+
 /* Titre au-dessus de tout */
 #title-home {
   width: 350px;
@@ -178,7 +210,6 @@ header {
   text-align: center;
   font-family: Unna, sans-serif;
   font-size: 1.5rem;
-  color: black;
   z-index: 3; /* au-dessus du fond gris */
 }
 
@@ -273,6 +304,8 @@ header {
 
 /* ! FOOTER  = BAS DE PAGE */
 
+/* ! FOOTER  = BAS DE PAGE */
+
 footer{
   top: 100%;
   width: 100%;
@@ -321,28 +354,52 @@ footer ul {
 /* DIV placer à droite */
 .copyright{
   width: 65%;
+  float: right;
   margin-top: 2%;
-  border: 2px solid orange;
 }
-
 
 .face-to-face{
   display: flex;
   align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+
+.droite{
+  margin-left: 25%;
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 /* Icons Footer */
 #phone, #facebook{
   width: 30px;
   height: 30px;
+  margin-right: 2%;
 }
 
 #email{
   width: 20px;
   height: 20px;
 }
+
+#phone{
+  margin-left: 35%;
+}
+
+.copyright2{
+  color: white;
+  font-family: Encode, sans-serif;
+  font-size: 0.8rem;
+  margin-left: 25%;
+}
+
 #mail{
-  margin-right: 8%;
+  margin-right: 10%;
+  margin-left: 1%;
 }
 
 /* Paragraphes du footer */
