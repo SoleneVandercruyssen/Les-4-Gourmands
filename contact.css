@@ -180,11 +180,11 @@ header {
 }
 
 .de{
-  margin-left: 50%;
+  margin-left: 40%;
 }
 
 .heures{
-  font-family: Unna, sans-serif;
+  font-family: Unna;
   font-size: 1.2rem;
   color: #AB3428;
   margin-bottom: 2%;
@@ -192,17 +192,16 @@ header {
 }
 
 .tel{
-  /* font-size: bolder; */
+  font-size: bolder;
   color: #AB3428;
-  margin-top: 4%;
-  font-family: Encode, sans-serif;
+  font-family: Encode;
   font-size: 1.8rem;
+  margin-top: 4%;
   margin-bottom: 4%;
 }
 
 .encode{
-  font-family: Unna;
-  font-size: 1.2rem;
+  font-family: Encode;
   margin-top: 2%;
 }
 
@@ -217,9 +216,8 @@ header {
 ul {
   margin-left: 15%;
   margin-top: 5%;
-  padding: 0;}
-
-
+  padding: 0;
+}
 }
 
 .accès {
@@ -232,10 +230,13 @@ ul {
 }
 
 h2{
+  position: relative;
   color: #AB3428;
   font-family: Unna, sans-serif;
   font-size: 1.5rem;
   margin-bottom: 2%;
+  justify-content: center;
+  align-items: center;
 }
 
 .carte {
@@ -305,12 +306,13 @@ footer ul {
   width: 65%;
   float: right;
   margin-top: 2%;
-  border: 2px solid orange;
 }
 
 .face-to-face{
   display: flex;
   align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 /* Icons Footer */
