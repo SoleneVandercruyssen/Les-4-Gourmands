@@ -165,28 +165,52 @@ footer ul {
 /* DIV placer à droite */
 .copyright{
   width: 65%;
+  float: right;
   margin-top: 2%;
-  border: 2px solid orange;
 }
-
 
 .face-to-face{
   display: flex;
   align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+
+.droite{
+  margin-left: 25%;
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 /* Icons Footer */
 #phone, #facebook{
   width: 30px;
   height: 30px;
+  margin-right: 2%;
 }
 
 #email{
   width: 20px;
   height: 20px;
 }
+
+#phone{
+  margin-left: 35%;
+}
+
+.copyright2{
+  color: white;
+  font-family: Encode, sans-serif;
+  font-size: 0.8rem;
+  margin-left: 25%;
+}
+
 #mail{
-  margin-right: 8%;
+  margin-right: 10%;
+  margin-left: 1%;
 }
 
 /* Paragraphes du footer */
@@ -195,6 +219,7 @@ footer  p{
   font-family: Encode, sans-serif;
   font-size: 0.8rem;
 }
+
 
 
 }

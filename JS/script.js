@@ -26,7 +26,10 @@ document.addEventListener('click', (event) => {
 
 
 
-// Affiche la section contact au chargement de la page
+// Ajoute la classe 'show' à toutes les sections concernées au chargement
 window.addEventListener('load', () => {
-    document.querySelector('.contact, .index').classList.add('show');
+  document.querySelectorAll('.contact, .index, .apropos').forEach(section => {
+    section.classList.add('show');
+  });
 });
+
