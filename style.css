@@ -189,29 +189,29 @@ header {
 #title-home {
   width: 350px;
   position: absolute;
-  top: 60px; /* pour qu’il apparaisse sur le fond gris */
+  top: 60px; 
   left: 2%;
   transform: translateX(-50%);
   text-align: center;
   font-family: Unna;
   font-size: bold;
   color: white;
-  z-index: 3; /* au-dessus du fond gris */
+  z-index: 3; 
 }
 
 
 /* Titre au-dessus de tout */
-#title-home {
+/* #title-home {
   width: 350px;
   position: absolute;
-  top: 80px; /* pour qu’il apparaisse sur le fond gris */
-  left: 50%;
+  top: 80px; 
+  left: 2%;
   transform: translateX(-50%);
   text-align: center;
   font-family: Unna, sans-serif;
   font-size: 1.5rem;
-  z-index: 3; /* au-dessus du fond gris */
-}
+  z-index: 3; 
+} */
 
 
 /* Section en dessous de l'image */
@@ -410,12 +410,11 @@ footer  p{
 }
 
 
-}
 
 /* Version desktop */
 
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 991px) and (max-width: 1990px) {
 body {
   width: 100%;
   height: 100vh;
@@ -690,6 +689,8 @@ footer  p{
   color: white;
   font-family: Encode, sans-serif;
   font-size: 0.8rem;
+}
+
 }
 
 }
