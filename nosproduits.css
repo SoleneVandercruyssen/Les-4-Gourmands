@@ -156,6 +156,62 @@ h2{
 }
 
 
+/* Slider */
+
+.image-slider {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid yellow;
+}
+
+.prev{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  position: absolute;
+  left: 20px;
+  /* top: 50%; */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.next{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  position: absolute;
+  right: 20px;
+  /* top: 50%; */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.image-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.image-apropos {
+  width: 100%;
+  height: 32vh;
+  flex-shrink: 0;
+}
+.image-slider .image-apropos {
+  width: 100%;
+  height: 32vh;
+}
 
 /* ! FOOTER  = BAS DE PAGE */
 

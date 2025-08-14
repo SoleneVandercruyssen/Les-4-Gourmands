@@ -28,8 +28,68 @@ document.addEventListener('click', (event) => {
 
 // Ajoute la classe 'show' à toutes les sections concernées au chargement
 window.addEventListener('load', () => {
-  document.querySelectorAll('.contact, .index, .apropos, .nosproduits').forEach(section => {
+document.querySelectorAll('.contact, .index, .apropos, .nosproduits').forEach(section => {
     section.classList.add('show');
-  });
+});
 });
 
+// Slider
+let currentSlide = 0;
+
+// Sélection de toutes les sections qui contiennent un slider
+document.querySelectorAll("section").forEach(section => {
+    const images = section.querySelectorAll(".image-apropos");
+    // Le premier et le dernier enfant sont sélectionnés pour les boutons de navigation
+    // On suppose que les boutons sont dans une div avec la classe "button-controls"
+    const prevBtn = section.querySelector(".button-controls button:first-child");
+    const nextBtn = section.querySelector(".button-controls button:last-child");
+
+    let index = 0;
+/**
+ * Ici on affiche la diapositive correspondante à l'index donné
+ * @param {number} i - L'index de l'image à afficher
+ * On utilise une fonction pour parcourir toutes les images et afficher uniquement celle qui correspond à l'index
+ * @returns {void}
+ */
+    function showSlide(i) {
+        // On fait une boucle pour parcourir toutes les images 
+        // et on affiche uniquement celle qui correspond à l'index
+        images.forEach((img, idx) => {
+            img.style.display = idx === i ? "block" : "none";
+        });
+    }
+
+    // Initialisation
+    showSlide(index);
+
+    prevBtn.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        showSlide(index);
+    });
+
+    nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        showSlide(index);
+    });
+});
+
+
+
+// const slides = document.querySelectorAll('.image-slider img');
+// function showSlide(index) {
+//     slides.forEach((slide, i) => {
+//         slide.style.display = (i === index) ? 'block' : 'none';
+//     });
+// }
+// function nextSlide() {
+//     currentSlide = (currentSlide + 1) % slides.length;
+//     showSlide(currentSlide);
+// }
+// function prevSlide() {
+//     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+//     showSlide(currentSlide);
+// }
+// Affiche la première diapositive au chargement
+// window.addEventListener('load', () => {
+//     showSlide(currentSlide);
+// }); 
