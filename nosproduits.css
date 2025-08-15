@@ -170,6 +170,20 @@ h2{
   border: 2px solid yellow;
 }
 
+.image-container{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* display: flex;
+  transition: transform 0.5s ease-in-out; */
+}
+
+
 .prev{
   margin-top: 5%;
   margin-bottom: 5%;
@@ -177,11 +191,6 @@ h2{
   left: 20px;
   /* top: 50%; */
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
 }
 
 .next{
@@ -191,6 +200,9 @@ h2{
   right: 20px;
   /* top: 50%; */
   transform: translateY(-50%);
+}
+
+button {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -198,11 +210,11 @@ h2{
   cursor: pointer;
 }
 
-
 .image-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
+
 .image-apropos {
   width: 100%;
   height: 32vh;

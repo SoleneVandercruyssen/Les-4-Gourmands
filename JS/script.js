@@ -44,6 +44,7 @@ document.querySelectorAll("section").forEach(section => {
     const prevBtn = section.querySelector(".button-controls button:first-child");
     const nextBtn = section.querySelector(".button-controls button:last-child");
 
+    // L’index (position) de l’image actuellement visible dans CETTE section
     let index = 0;
 /**
  * Ici on affiche la diapositive correspondante à l'index donné
