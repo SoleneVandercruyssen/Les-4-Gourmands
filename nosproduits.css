@@ -329,7 +329,262 @@ footer  p{
   font-family: Encode, sans-serif;
   font-size: 0.8rem;
 }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1990px) {
+  body{
+    width: 100%;
+    height: 100vh;
+  }
+
+  .logo_img {
+      margin-left: 2%;
+      width: 50px;
+      height: 50px;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      background-color: black;
+      padding: 0 5%;
+    }
+
+    /* NAVIGATION */
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .nav ul li a:hover {
+      color: #AB3428;
+    }
+
+  h2{
+    font-family: Encode, sans-serif;
+    font-size: 1.5rem;
+    margin-top: 2%;
+    text-align: center;
+  }  
+
+.image-apropos{
+  width: 100%;
+  height: 50vh;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 2%;
+}
+
+.text{
+  margin-top: 4%;
+  padding: 6%;
+}
+
+.section-viennoiseries{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  background-color: #AB3428;
+}
+
+.section-plats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  background-color: #989898;
+}
 
 
+/* Slider */
+
+.image-slider {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid yellow;
+}
+
+.image-container{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* display: flex;
+  transition: transform 0.5s ease-in-out; */
+}
+
+
+.prev{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  position: absolute;
+  left: 20px;
+  /* top: 50%; */
+  transform: translateY(-50%);
+}
+
+.next{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  position: absolute;
+  right: 20px;
+  /* top: 50%; */
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-apropos {
+  width: 100%;
+  height: 32vh;
+  flex-shrink: 0;
+}
+.image-slider .image-apropos {
+  width: 100%;
+  height: 32vh;
+}
+
+/* ! FOOTER  = BAS DE PAGE */
+
+footer{
+  top: 100%;
+  width: 100%;
+  height: 20vh;
+  background-color: black;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 0;
+  }
+  
+  footer li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  footer li a {
+    text-decoration: none;
+    color: white;
+  }
+
+/* 
+  DIV qui contient les DIV LIENFOOTER et DIV COPYRIGHT
+  Elle est appelée mirror car elle place les deux DIV face à face
+*/
+#mirror{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin-left: 1%;
+  margin-top: 2%;
+}
+
+/* DIV placer à gauche */
+.liens_footer{
+  width: 35%;
+  margin-right: 2%;
+}
+
+/* DIV placer à droite */
+.copyright{
+  width: 65%;
+  float: right;
+  margin-top: 2%;
+}
+
+.face-to-face{
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+
+.droite{
+  margin-left: 25%;
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* Icons Footer */
+#phone, #facebook{
+  width: 30px;
+  height: 30px;
+  margin-right: 2%;
+}
+
+#email{
+  width: 20px;
+  height: 20px;
+}
+
+#phone{
+  margin-left: 35%;
+}
+
+.copyright2{
+  color: white;
+  font-family: Encode, sans-serif;
+  font-size: 0.8rem;
+  margin-left: 25%;
+}
+
+#mail{
+  margin-right: 10%;
+  margin-left: 1%;
+}
+
+/* Paragraphes du footer */
+footer  p{
+  color: white;
+  font-family: Encode, sans-serif;
+  font-size: 0.8rem;
+}
 
 }

@@ -294,87 +294,45 @@ footer  p{
     background-color: white;
   }
 
+
   .logo_img {
-    margin-top: 1%;
-    margin-left: 1%;
-    width: 80px;
-    height: 80px;
-  }
+      margin-left: 2%;
+      width: 50px;
+      height: 50px;
+    }
 
-  /* HEADER */ 
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      background-color: black;
+      padding: 0 5%;
+    }
 
-header {
-    position: relative;
-    height: 12vh;
-    background-color: black;
-  }
+    /* NAVIGATION */
+    .nav {
+      display: flex;
+      align-items: center;
+    }
 
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
 
-  /* Bouton burger */
-.burger-container {
-    position: absolute;
-    top: 2vh;
-    right: 20px;
-    cursor: pointer;
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    .nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
 
-.burger-line {
-  display: none;
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s ease;
-}
-
-/* Menu caché par défaut */
-.nav {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100vh;
-    background-color: black;
-    transition: right 0.4s ease;
-    z-index: 1000;
-}
-
-.nav ul {
-    list-style: none;
-    padding: 50px 20px;
-}
-
-.nav ul li {
-    margin: 20px 0;
-}
-
-.nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Quand le menu est actif */
-.nav.active {
-    right: 0;
-}
-
-/* Animation burger en croix */
-.burger-container.active .burger-line:nth-child(1) {
-    transform: rotate(40deg) translate(10px, 10px);
-}
-
-.burger-container.active .burger-line:nth-child(2) {
-    opacity: 0;
-}
-
-.burger-container.active .burger-line:nth-child(3) {
-    transform: rotate(-40deg) translate(6px, -6px);
-}
+    .nav ul li a:hover {
+      color: #AB3428;
+    }
 
 .apropos {
   position: relative;
