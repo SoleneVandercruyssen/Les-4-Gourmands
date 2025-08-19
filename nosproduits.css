@@ -30,10 +30,7 @@ body {
 
 
 @media screen and (min-width: 360px) and (max-width: 990px) {
-  body{
-  width: 100%;
-  height: 100vh;
-}
+
 
   .logo_img {
     margin-top: 4%;
@@ -137,6 +134,7 @@ h2{
   margin-top: 4%;
   margin-bottom: 4%;
   padding: 8%;
+  
 }
 
 .section-viennoiseries{
@@ -383,17 +381,36 @@ footer  p{
     text-align: center;
   }  
 
-.image-apropos{
-  width: 100%;
-  height: 50vh;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-bottom: 2%;
+.image-apropos {
+  width: 100%;              /* prend toute la largeur du conteneur */
+  max-height: 60vh;         /* limite la hauteur */
+  height: auto;             /* garde le ratio original */
+  flex-shrink: 0;
+  object-fit: cover;        /* recadre l’image si besoin */
+  border-radius: 10px;      /* arrondis optionnels */
 }
 
+
+.image-slider .image-apropos {
+  width: 100%;
+  max-height: 60vh;
+  height: auto;
+  object-fit: cover;
+}
+
+/* .image-apropos {
+  width: 100%;
+  height: 40vh;    hauteur fixe 
+  object-fit: cover;  évite la déformation 
+} */
+
+
 .text{
-  margin-top: 4%;
-  padding: 6%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  padding: 5%;
+  font-size: 1.6rem;
 }
 
 .section-viennoiseries{
@@ -415,31 +432,19 @@ footer  p{
 
 /* Slider */
 
+
 .image-slider {
   position: relative;
-  width: 60%;
+  width: 40%;            /* réduit la largeur globale du slider */
+  max-width: 600px;      /* limite la taille sur grand écran */
   margin: auto;
   overflow: hidden;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   border: 2px solid yellow;
+  margin-bottom: 3%;
 }
-
-.image-container{
-  position: relative;
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  /* display: flex;
-  transition: transform 0.5s ease-in-out; */
-}
-
 
 .prev{
   margin-top: 5%;
@@ -463,7 +468,7 @@ button {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
 }
 
@@ -482,13 +487,15 @@ button {
   height: 32vh;
 }
 
+
 /* ! FOOTER  = BAS DE PAGE */
 
 footer{
   top: 100%;
   width: 100%;
-  height: 20vh;
+  height: 22vh;
   background-color: black;
+  font-size: 1.4rem;
 }
 
 footer ul {
@@ -504,9 +511,11 @@ footer ul {
     list-style: none;
     display: inline-block;
     margin-right: 20px;
+    width: 100%;
   }
 
   footer li a {
+    width: 100%;
     text-decoration: none;
     color: white;
   }
@@ -520,20 +529,23 @@ footer ul {
   justify-content: center;
   align-items: left;
   margin-left: 1%;
+  margin-right: 1%;
   margin-top: 2%;
+  width: 100%;
+  height: 100%;
+  
 }
 
 /* DIV placer à gauche */
 .liens_footer{
-  width: 35%;
-  margin-right: 2%;
+  width: 70%;
+  /* margin-right: 2%; */
 }
 
 /* DIV placer à droite */
 .copyright{
-  width: 65%;
+  width:  30%;
   float: right;
-  margin-top: 2%;
 }
 
 .face-to-face{
@@ -541,11 +553,14 @@ footer ul {
   align-items: center;
   margin-top: 2%;
   margin-bottom: 2%;
-  margin-left: 5%;
+  margin-left: 20%;
 }
 
+/* FACEBOOK LES QUATRE GOURMANDS */
 .droite{
-  margin-left: 25%;
+  width: 55%;
+  margin-left: 45%;
+  margin-right: 1%;
   display: flex;
   align-items: center;
   margin-top: 2%;
@@ -554,29 +569,30 @@ footer ul {
 
 /* Icons Footer */
 #phone, #facebook{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-right: 2%;
 }
 
 #email{
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 #phone{
-  margin-left: 35%;
+  margin-left: 45%;
 }
 
 .copyright2{
   color: white;
+  width: 60%;
   font-family: Encode, sans-serif;
-  font-size: 0.8rem;
-  margin-left: 25%;
+  font-size: 1.3rem;
+  margin-left: 42%;
 }
-
+/* icon mail */
 #mail{
-  margin-right: 10%;
+  margin-right: 2%;
   margin-left: 1%;
 }
 
@@ -584,7 +600,6 @@ footer ul {
 footer  p{
   color: white;
   font-family: Encode, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
 }
-
 }

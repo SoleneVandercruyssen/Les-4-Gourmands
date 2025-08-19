@@ -626,13 +626,14 @@ iframe{
   border: 0;
 }
 
-    /* ! FOOTER  = BAS DE PAGE */
+/* ! FOOTER  = BAS DE PAGE */
 
 footer{
   top: 100%;
   width: 100%;
-  height: 20vh;
+  height: 22vh;
   background-color: black;
+  font-size: 1.4rem;
 }
 
 footer ul {
@@ -648,9 +649,11 @@ footer ul {
     list-style: none;
     display: inline-block;
     margin-right: 20px;
+    width: 100%;
   }
 
   footer li a {
+    width: 100%;
     text-decoration: none;
     color: white;
   }
@@ -664,20 +667,23 @@ footer ul {
   justify-content: center;
   align-items: left;
   margin-left: 1%;
+  margin-right: 1%;
   margin-top: 2%;
+  width: 100%;
+  height: 100%;
+  
 }
 
 /* DIV placer à gauche */
 .liens_footer{
-  width: 35%;
-  margin-right: 2%;
+  width: 70%;
+  /* margin-right: 2%; */
 }
 
 /* DIV placer à droite */
 .copyright{
-  width: 65%;
+  width:  30%;
   float: right;
-  margin-top: 2%;
 }
 
 .face-to-face{
@@ -685,11 +691,14 @@ footer ul {
   align-items: center;
   margin-top: 2%;
   margin-bottom: 2%;
-  margin-left: 5%;
+  margin-left: 20%;
 }
 
+/* FACEBOOK LES QUATRE GOURMANDS */
 .droite{
-  margin-left: 25%;
+  width: 55%;
+  margin-left: 45%;
+  margin-right: 1%;
   display: flex;
   align-items: center;
   margin-top: 2%;
@@ -698,29 +707,30 @@ footer ul {
 
 /* Icons Footer */
 #phone, #facebook{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-right: 2%;
 }
 
 #email{
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 #phone{
-  margin-left: 35%;
+  margin-left: 45%;
 }
 
 .copyright2{
   color: white;
+  width: 60%;
   font-family: Encode, sans-serif;
-  font-size: 0.8rem;
-  margin-left: 25%;
+  font-size: 1.3rem;
+  margin-left: 42%;
 }
-
+/* icon mail */
 #mail{
-  margin-right: 10%;
+  margin-right: 2%;
   margin-left: 1%;
 }
 
@@ -728,7 +738,7 @@ footer ul {
 footer  p{
   color: white;
   font-family: Encode, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
 }
 
 }
