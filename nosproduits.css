@@ -435,14 +435,15 @@ footer  p{
 
 .image-slider {
   position: relative;
-  width: 40%;            /* réduit la largeur globale du slider */
-  max-width: 600px;      /* limite la taille sur grand écran */
+  width: 80%;            /* réduit la largeur globale du slider */
+  max-width: 650px;      /* limite la taille sur grand écran */
   margin: auto;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid yellow;
+  box-shadow: black 5px 3px 10px; /* ajoute une ombre */
+  border-radius: 10px;   /* arrondis optionnels */
   margin-bottom: 3%;
 }
 
@@ -450,8 +451,8 @@ footer  p{
   margin-top: 5%;
   margin-bottom: 5%;
   position: absolute;
-  left: 20px;
-  /* top: 50%; */
+  left: 15%;
+  top: 40%;
   transform: translateY(-50%);
 }
 
@@ -459,8 +460,8 @@ footer  p{
   margin-top: 5%;
   margin-bottom: 5%;
   position: absolute;
-  right: 20px;
-  /* top: 50%; */
+  /* top: 50%; */ 
+  right: 15%;
   transform: translateY(-50%);
 }
 
@@ -487,6 +488,17 @@ button {
   height: 32vh;
 }
 
+button.next1, button.next3, button.next, button.next2 {
+  position: relative;
+  left: 69%;
+  top: -200px;
+}
+
+button.prev1, button.prev3, button.prev, button.prev2 {
+  position: relative;
+  left: 25%;
+  top: -200px;
+}
 
 /* ! FOOTER  = BAS DE PAGE */
 

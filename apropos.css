@@ -393,9 +393,10 @@ footer  p{
 }
 
 .text{
-  margin-top: 2%;
   margin-bottom: 2%;
-  padding: 4%;
+  padding: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
   font-size: 1.8rem;
 }
 
