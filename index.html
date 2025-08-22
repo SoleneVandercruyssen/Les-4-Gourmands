@@ -45,6 +45,82 @@
 </header>
 
 <body>
+<!-- Bandeau Cookies -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #f8f8f8; border-top: 1px solid #ddd; padding: 15px; font-family: Arial, sans-serif; box-shadow: 0 -2px 6px rgba(0,0,0,0.1); z-index: 9999; display: none;">
+  <p style="margin: 0 0 10px 0; font-size: 14px;">
+    Nous utilisons des cookies pour améliorer votre expérience sur notre site 
+    <strong>Les Quatre Gourmands d'Emmerin</strong>. Vous pouvez accepter, refuser ou personnaliser vos choix.
+    <a href="/politique-cookies.html" target="_blank">En savoir plus</a>
+  </p>
+  <button onclick="acceptCookies()" style="background:#2e7d32; color:#fff; border:none; padding:8px 15px; margin-right:10px; cursor:pointer; border-radius:5px;">Accepter</button>
+  <button onclick="refuseCookies()" style="background:#AB3428; color:#fff; border:none; padding:8px 15px; margin-right:10px; cursor:pointer; border-radius:5px;">Refuser</button>
+  <button onclick="openPreferences()" style="background:#989898; color:#fff; border:none; padding:8px 15px; cursor:pointer; border-radius:5px;">Personnaliser</button>
+</div>
+
+<!-- Fenêtre de préférences -->
+<div id="cookie-preferences" style="position: fixed; bottom: 80px; right: 20px; width: 300px; background: #fff; border: 1px solid #ddd; padding: 15px; font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); display: none; z-index: 10000;">
+  <h3 style="margin-top:0;">Préférences cookies</h3>
+  <label><input type="checkbox" disabled checked> Cookies essentiels (obligatoires)</label><br>
+  <label><input type="checkbox" id="analytics-cookies"> Cookies de mesure d'audience</label><br>
+  <label><input type="checkbox" id="social-cookies"> Cookies réseaux sociaux</label><br><br>
+  <button onclick="savePreferences()" style="background:#1976d2; color:#fff; border:none; padding:8px 15px; cursor:pointer; border-radius:5px;">Enregistrer</button>
+</div>
+
+<script>
+  // Vérifie si un choix existe déjà
+  window.onload = function() {
+    if (!getCookie("cookies-choice")) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+  }
+
+  function acceptCookies() {
+    setCookie("cookies-choice", "accepted", 180);
+    document.getElementById("cookie-banner").style.display = "none";
+    // Ici tu peux activer Google Analytics ou autres scripts
+    console.log("Cookies acceptés");
+  }
+
+  function refuseCookies() {
+    setCookie("cookies-choice", "refused", 180);
+    document.getElementById("cookie-banner").style.display = "none";
+    // Ici tu bloques Google Analytics ou autres scripts
+    console.log("Cookies refusés");
+  }
+
+  function openPreferences() {
+    document.getElementById("cookie-preferences").style.display = "block";
+  }
+
+  function savePreferences() {
+    let analytics = document.getElementById("analytics-cookies").checked;
+    let social = document.getElementById("social-cookies").checked;
+    let prefs = { analytics: analytics, social: social };
+    setCookie("cookies-choice", JSON.stringify(prefs), 180);
+    document.getElementById("cookie-preferences").style.display = "none";
+    document.getElementById("cookie-banner").style.display = "none";
+    console.log("Préférences sauvegardées :", prefs);
+  }
+
+  // Fonctions utilitaires cookies
+  function setCookie(name, value, days) {
+    let d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  function getCookie(name) {
+    let cname = name + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i=0; i<ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(cname) == 0) return c.substring(cname.length, c.length);
+    }
+    return "";
+  }
+</script>
 <main> 
 
 
@@ -108,9 +184,9 @@
                 <li><a href="./nosproduits.html">Nos produits</a></li>
                 <li><a href="./contact.html">Contact</a></li>
                 <li><a href="./apropos.html">A propos</a></li>
-                <li><a href="/mentionsLégales">Mentions légales</a></li>
+                <li><a href="./mentions.html">Mentions légales</a></li>
                 <li><a href="/confidientialité">Politique de confidentialité</a></li>
-                <li><a href="/cookies">Cookies</a></li>
+                <li><a href="./cookies.html">Cookies</a></li>
             </ul>
         </div>
 
