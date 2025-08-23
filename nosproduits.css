@@ -155,7 +155,6 @@ h2{
 
 
 /* Slider */
-
 .image-slider {
   position: relative;
   width: 90%;
@@ -165,7 +164,6 @@ h2{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 2px solid yellow;
 }
 
 .image-container{
