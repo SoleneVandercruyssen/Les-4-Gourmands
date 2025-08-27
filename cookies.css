@@ -182,7 +182,6 @@ footer ul {
 #mirror{
   display: flex;
   justify-content: center;
-  align-items: left;
   margin-left: 1%;
   margin-top: 2%;
 }

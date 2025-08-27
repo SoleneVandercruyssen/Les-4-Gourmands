@@ -176,6 +176,11 @@ header {
   color: white;
 }
 
+/* Animation pour que le contenu glisse/devient visible lors du défilement de la page */
+
+
+
+
 /* ! FOOTER  = BAS DE PAGE */
 
 footer{
@@ -212,7 +217,6 @@ footer ul {
 #mirror{
   display: flex;
   justify-content: center;
-  align-items: left;
   margin-left: 1%;
   margin-top: 2%;
 }
@@ -446,7 +450,6 @@ footer ul {
 #mirror{
   display: flex;
   justify-content: center;
-  align-items: left;
   margin-left: 1%;
   margin-top: 2%;
   width: 100%;
