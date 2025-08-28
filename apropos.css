@@ -121,15 +121,15 @@ header {
 /* Bloc gris de fond pour le titre */
 .background {
   background-color: grey;
+  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 50px;
+  top: 80px;
   left: 20px;
   width: 90%;
-  height: 15vh;
+  height: 10vh;
   opacity: 0.7;
   z-index: 2; /* devant l’image */
 }
-
 
 /* État initial : décalé vers le bas et transparent */
 .background,
@@ -151,7 +151,7 @@ header {
 #title-apropos {
   width: 350px;
   position: absolute;
-  top: 60px; /* pour qu’il apparaisse sur le fond gris */
+  top: 90px; /* pour qu’il apparaisse sur le fond gris */
   left: 2%;
   transform: translateX(-50%);
   text-align: center;
@@ -166,6 +166,7 @@ header {
   height: 30vh;
   position: relative;
   z-index: 1; /* tout en dessous */
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 .text{

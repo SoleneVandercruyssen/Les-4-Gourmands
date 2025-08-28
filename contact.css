@@ -140,6 +140,7 @@ header {
   height: 30vh;
   position: relative;
   z-index: 1; /* tout en dessous */
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Bloc gris de fond pour le titre */
@@ -463,6 +464,7 @@ footer  p{
 /* Bloc gris de fond pour le titre */
 .background {
   background-color: grey;
+  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50px;
   left: 15%;

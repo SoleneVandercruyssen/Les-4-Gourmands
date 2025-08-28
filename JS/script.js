@@ -121,25 +121,6 @@ document.querySelectorAll("section").forEach(section => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Code pour un slider simple (non utilisé ici)
 // let currentSlide = 0;
 // const slides = document.querySelectorAll('.image-slider img');
