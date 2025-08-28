@@ -90,6 +90,11 @@ header {
     font-size: 18px;
 }
 
+/* Animation au survol */
+.nav ul li a:active {
+    color: #AB3428;
+}
+
 /* Quand le menu est actif */
 .nav.active {
     right: 0;

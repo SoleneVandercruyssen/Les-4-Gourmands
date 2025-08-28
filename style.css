@@ -139,8 +139,8 @@ header {
 }
 
 /* Animation au survol */
-.nav ul li a:hover::after {
-    width: 100%;
+.nav ul li a:active {
+    color: #AB3428;
 }
 
 

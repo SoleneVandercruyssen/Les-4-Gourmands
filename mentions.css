@@ -121,23 +121,11 @@ header {
 }
 
 
-/* Soulignement animé */
-.nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0; /* Distance sous le texte */
-    width: 0;
-    height: 2px;
-    background-color: #AB3428;
-    transition: width 0.3s ease;
+.nav ul li a:active {
+    color: #AB3428;
 }
 
-/* Animation au survol */
-.nav ul li a:hover::after {
-    width: 100%;
-}
-  
+
 
 
 
