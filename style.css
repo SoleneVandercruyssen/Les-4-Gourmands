@@ -167,7 +167,7 @@ header {
   left: 50%;
   transform: translate(-50%, 50%);
   width: 90%;
-  height: 10vh;
+  height: 12vh;
   opacity: 0;
   z-index: 2;
   transition: transform 0.6s ease, opacity 0.6s ease;
@@ -177,7 +177,7 @@ header {
 #title-home {
   width: 250px;
   position: absolute;
-  top: 80px;
+  top: 85px;
   left: 50%;
   transform: translate(-50%, 50%);
   text-align: center;
@@ -454,98 +454,113 @@ body {
   max-height: 60vh;
   position: relative;
   z-index: 1; /* tout en dessous */
+  box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Bloc gris de fond pour le titre */
 .background {
   background-color: grey;
+  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 50px;
-  left: 70px;
-  width: 90%;
-  height: 15vh;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 80%;
+  height: 20vh;
   opacity: 0;
-  z-index: 2; /* devant l’image */
-  /* left: 15%;
-  width: 70%;
-  height: 30vh; */
+  z-index: 2;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 /* Titre au-dessus de tout */
 #title-home {
-  width: 450px;
+  width: 250px;
   position: absolute;
-  top: 80px; /* pour qu’il apparaisse sur le fond gris */
+  top: 115px;
   left: 50%;
+  transform: translate(-50%, 50%);
   text-align: center;
   font-family: Unna;
-  font-size: bold;
+  font-size: 2rem;
   color: white;
-  z-index: 3; /* au-dessus du fond gris */
-}
-
-/* État initial */
-.background,
-#title-home {
-  transform: translateY(50%);  /* pousse vers le bas au lieu du haut */
-  opacity: 0;                  /* invisible au départ */
+  z-index: 3;
+  opacity: 0;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 /* État final */
 .show .background,
 .show #title-home {
-  transform: translateY(0);    /* revient à sa place */
-  opacity: 1;                  /* devient visible */
+  transform: translate(-50%, 0);
+  opacity: 1;
 }
+
 
 /* Section en dessous de l'image */
 
 .text{
-  margin-top: 4%;
-  margin-bottom: 4%;
-  padding: 8%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 3%;
 }
 
 /* Section display images */
 
 .home_section{
   width: 100%;
-  height: 70vh;
-  justify-content: center;
+  height: 170vh;
+  justify-content: center;;
   padding: 3%;
-  border: 2px solid hotpink;
+  background-color: #AB3428;
 }
 
 .home_section_content{
   width: 100%;
   height: 60vh;
-  background-color: #AB3428;
-  border: 2px solid lawngreen;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
 }
 
 
 .home_section_images{
-  padding: 5%;
-  border: 2px solid blue;
+  padding: 3%;
   width: 100%;
   height: 100%;
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
 }
 
 .card_img{
-  width: 340px;
-  height: 340px;
+  width: 440px;
+  height: 440px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card_img:hover {
+  transform: scale(1.05);
 }
 
 .button_produit{
-  width: 140px;
-  height: 40px;
-  background-color: #AB3428;
-  color: black;
+  width: 240px;
+  height: 50px;
+  /* padding: 1%; */
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+
+.home_section_button {
+  border: 2px solid #989898;
+  margin-top: 40%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .home-contact{
