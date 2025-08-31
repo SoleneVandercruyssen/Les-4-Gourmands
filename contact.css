@@ -466,10 +466,10 @@ footer  p{
   background-color: grey;
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 50px;
+  top: 250px;
   left: 15%;
   width: 70%;
-  height: 30vh;
+  height: 10vh;
   opacity: 0.7;
   z-index: 2; /* devant l’image */
 }
@@ -495,7 +495,7 @@ footer  p{
 #title-contact {
   width: 350px;
   position: absolute;
-  top: 80px; /* pour qu’il apparaisse sur le fond gris */
+  top: 270px; /* pour qu’il apparaisse sur le fond gris */
   left: 40%;
   font-size: 2.5rem;
   transform: translateX(-50%);
@@ -561,7 +561,7 @@ p{
   font-size: bolder;
   color: #AB3428;
   font-family: Encode;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 5%;
   margin-bottom: 2%;
 }
@@ -639,7 +639,7 @@ footer{
   width: 100%;
   height: 22vh;
   background-color: black;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 footer ul {
