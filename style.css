@@ -179,7 +179,7 @@ header {
   position: absolute;
   top: 85px;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-150%, 0); /* sort de l’écran à gauche */
   text-align: center;
   font-family: Unna;
   font-size: 1.5rem;
@@ -478,7 +478,7 @@ body {
   position: absolute;
   top: 115px;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-150%, 0); /* sort de l’écran à gauche */
   text-align: center;
   font-family: Unna;
   font-size: 2rem;
