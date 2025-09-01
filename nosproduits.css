@@ -237,7 +237,6 @@ button {
   width: 60px;
 }
 
-
   .image-slider .prev {
     left: 5px;   /* plus proche du bord */
   }
@@ -245,8 +244,6 @@ button {
   .image-slider .next {
     right: 5px;
   }
-
-
 
 .image-slider {
   position: relative;
