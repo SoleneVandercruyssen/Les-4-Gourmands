@@ -28,7 +28,7 @@ document.addEventListener('click', (event) => {
 
 // Ajoute la classe 'show' à toutes les sections concernées au chargement
 window.addEventListener('load', () => {
-document.querySelectorAll('.home, .contact, .apropos, .nosproduits').forEach(section => {
+document.querySelectorAll('.home, .produits, .contact, .apropos').forEach(section => {
     section.classList.add('show');
 });
 });

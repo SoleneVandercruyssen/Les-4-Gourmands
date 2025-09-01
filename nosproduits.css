@@ -117,7 +117,57 @@ header {
     color: #AB3428;
 }
 
+.home {
+  position: relative;
+}
 
+/* Image en fond */
+.home_img {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  z-index: 1; /* tout en dessous */
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Bloc gris de fond pour le titre */
+.background {
+  background-color: grey;
+  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 90%;
+  height: 8vh;
+  opacity: 0;
+  z-index: 2;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Titre au-dessus de tout */
+#title-produits {
+  width: 250px;
+  position: absolute;
+  top: 205px;
+  left: 50%;
+  transform: translate(-150%, 0); /* sort de l’écran à gauche */
+  text-align: center;
+  font-family: Unna;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 3;
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* État final */
+.show .background,
+.show #title-produits {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
 
 h2{
   font-family: Encode, sans-serif;
@@ -125,15 +175,6 @@ h2{
   margin-top: 2%;
   margin-bottom: 2%;
   text-align: center;
-}
-
-.image-apropos{
-  width: 90%;
-  height: 32vh;
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 2%;
 }
 
 
@@ -184,28 +225,6 @@ h2{
   justify-content: center;
 }
 
-.button-controls{
-  display: flex;
-  /* border: 2px solid yellow; */
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5%;
-  width: 80%;
-  margin-left: 10%;
-}
-
-
-/* .prev{
-  position: absolute;
-  left: 20px;
-  
-}
-.next{
-  position: absolute;
-  right: 20px;
-  transform: translateY(-50%);
-} */
-
 button {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -218,15 +237,30 @@ button {
   width: 60px;
 }
 
-button.next1, button.next3, button.next, button.next2 {
+
+  .image-slider .prev {
+    left: 5px;   /* plus proche du bord */
+  }
+
+  .image-slider .next {
+    right: 5px;
+  }
+
+
+
+.image-slider {
   position: relative;
-}
-button.prev1, button.prev3, button.prev, button.prev2 {
-  position: relative;
-  left: -6%;
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;   /* image en haut, boutons en dessous */
+  align-items: center;
+  justify-content: center;
 }
 
 .image-container {
+  width: 100%;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
@@ -234,9 +268,31 @@ button.prev1, button.prev3, button.prev, button.prev2 {
 .image-apropos {
   width: 100%;
   height: 32vh;
+  object-fit: cover;
   flex-shrink: 0;
+  border-radius: 10px;
 }
 
+/* Boutons */
+.image-slider .prev,
+.image-slider .next {
+  position: static;   /* enlève absolute */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 14px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 8px;
+}
+
+/* Conteneur des boutons centré */
+.button-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 /* ! FOOTER  = BAS DE PAGE */
 
 footer{
@@ -387,29 +443,64 @@ footer  p{
       color: #AB3428;
     }
 
-  h2{
+.home {
+  position: relative;
+}
+
+/* Image en fond */
+.home_img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  position: relative;
+  z-index: 1; /* tout en dessous */
+  box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bloc gris de fond pour le titre */
+.background {
+  background-color: grey;
+  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 80%;
+  height: 10vh;
+  opacity: 0;
+  z-index: 2;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Titre au-dessus de tout */
+#title-produits {
+  width: 250px;
+  position: absolute;
+  top: 325px;
+  left: 50%;
+  transform: translate(-150%, 0); /* sort de l’écran à gauche */
+  text-align: center;
+  font-family: Unna;
+  font-size: 2rem;
+  color: white;
+  z-index: 3;
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* État final */
+.show .background,
+.show #title-produits {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+h2{
     font-family: Encode, sans-serif;
     font-size: 1.5rem;
     margin-top: 2%;
     text-align: center;
   }  
-
-.image-apropos {
-  width: 100%;              /* prend toute la largeur du conteneur */
-  max-height: 60vh;         /* limite la hauteur */
-  height: auto;             /* garde le ratio original */
-  flex-shrink: 0;
-  object-fit: cover;        /* recadre l’image si besoin */
-  border-radius: 10px;      /* arrondis optionnels */
-}
-
-
-.image-slider .image-apropos {
-  width: 100%;
-  max-height: 60vh;
-  height: auto;
-  object-fit: cover;
-}
 
 
 .text{
@@ -440,39 +531,11 @@ footer  p{
 /* Slider */
 
 
-.image-slider {
-  position: relative;
-  width: 80%;            /* réduit la largeur globale du slider */
-  max-width: 650px;      /* limite la taille sur grand écran */
-  margin: auto;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: black 5px 3px 10px; /* ajoute une ombre */
-  border-radius: 10px;   /* arrondis optionnels */
-  margin-bottom: 3%;
-}
-
-.prev{
-  left: 15%;
-  top: 40%;
-  transform: translateY(-50%);
-}
-
-.next{
-  /* top: 50%; */ 
-  position: relative;
-  left: 60%;
-  top: -120px;
-  transform: translateY(-50%);
-}
-
-button {
+button.prev, button.next {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 20px;
+  /* padding: 20px; */
   cursor: pointer;
 }
 
@@ -481,26 +544,50 @@ button {
   transition: transform 0.5s ease-in-out;
 }
 
-.image-apropos {
-  width: 100%;
-  height: 32vh;
-  flex-shrink: 0;
-}
+/* Toutes les images du slider */
 .image-slider .image-apropos {
   width: 100%;
-  height: 32vh;
+  height: 32vh;         /* taille unique */
+  object-fit: cover;    /* recadrage uniforme */
+  border-radius: 10px;
+  flex-shrink: 0;       /* évite qu’elles se compressent */
 }
 
-button.next1, button.next3, button.next, button.next2 {
+/* Conteneur du slider */
+.image-slider {
   position: relative;
-  left: 69%;
-  top: -200px;
+  width: 80%;
+  max-width: 650px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: black 5px 3px 10px;
+  border-radius: 10px;
+  margin-bottom: 3%;
 }
 
-button.prev1, button.prev3, button.prev, button.prev2 {
-  position: relative;
-  left: 25%;
-  top: -200px;
+/* Boutons de navigation */
+.image-slider .prev,
+.image-slider .next {
+  position: absolute;
+  top: 50%;                    /* centré verticalement */
+  transform: translateY(-50%);
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.image-slider .prev {
+  left: 10px;  /* bord gauche */
+}
+
+.image-slider .next {
+  right: 10px; /* bord droit */
 }
 
 /* ! FOOTER  = BAS DE PAGE */
