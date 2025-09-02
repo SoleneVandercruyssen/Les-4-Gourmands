@@ -129,32 +129,35 @@ header {
 .burger-container.active .burger-line:nth-child(3) {
     transform: rotate(-40deg) translate(6px, -6px);
 }
-
+/*! Section contact-upper */
 .contact {
   position: relative;
+  display: flex;
+  justify-content: center; /* centre horizontalement le titre */
+  align-items: center; /* ajuste verticalement si besoin */
+  width: 100%;  
+  height: auto;           /* important pour le centrage */
+  overflow: hidden;
 }
 
-/* Image en fond */
-.contact_img {
-  width: 100%;
-  height: 30vh;
-  position: relative;
-  z-index: 1; /* tout en dessous */
-  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.2);
-}
 
 /* Bloc gris de fond pour le titre */
 .background {
-  background-color: grey;
   position: absolute;
-  top: 70px;
-  left: 30px;
-  width: 80%;
-  height: 10vh;
-  opacity: 0.7;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 12vh;
+  background-color: grey;
+  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
+  display: flex;
+  justify-content: center; /* centre horizontalement le titre */
+  align-items: center; /* ajuste verticalement si besoin */
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translate(-50%, -50%); /* animation initiale : glisse du haut */
 }
-
 
 /* État initial : décalé vers le bas et transparent */
 .background,
@@ -167,26 +170,44 @@ header {
 /* État final : en place et visible */
 .show .background,
 .show #title-contact {
-  transform: translateY(0);
+  transform: translate(-50%, -50%);
   opacity: 1;
 }
 
 
 /* Titre au-dessus de tout */
 #title-contact {
-  width: 350px;
   position: absolute;
-  top: 100px; /* pour qu’il apparaisse sur le fond gris */
-  left: 2%;
-  transform: translateX(-50%);
+  top: 50%; /* milieu de l'image */
+  left: 50%;
+  transform: translate(-50%, -50%); 
   text-align: center;
   font-family: Unna;
-  font-size: bold;
+  font-size: 2rem;
+  font-weight: bold;
   color: white;
   z-index: 3; /* au-dessus du fond gris */
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translateY(-50%);
+  max-width: 90%;/* évite de dépasser l’écran */
 }
 
-/* SECTION CONTACT */
+.contact_img {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  object-fit: cover; /* pour que l’image couvre bien toute la zone */
+  display: block; /* pour éviter un petit espace en dessous */
+  z-index: 1; /* tout en dessous */
+  top: 0;
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*! Fin de la section contact-upper */
+
+/*! SECTION CONTACT */
+
 .coordonnées {
   position: relative;
   width: 90%;
@@ -401,6 +422,8 @@ footer  p{
 
 }
 
+/*! Version desktop */
+
 @media screen and (min-width: 991px) and (max-width: 1990px) {
   body{
     width: 100%;
@@ -449,31 +472,36 @@ footer  p{
     }
 
 
+/* ! CONTACT UPPER SECTION */
+
 .contact {
   position: relative;
+  display: flex;
+  justify-content: center; /* centre horizontalement le titre */
+  align-items: center; /* ajuste verticalement si besoin */
+  width: 100%;  
+  height: auto;           /* important pour le centrage */
+  overflow: hidden;
 }
 
-/* Image en fond */
-.contact_img {
-  width: 100%;
-  height: 70vh;
-  position: relative;
-  z-index: 1; /* tout en dessous */
-}
 
 /* Bloc gris de fond pour le titre */
 .background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 12vh;
   background-color: grey;
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 250px;
-  left: 15%;
-  width: 70%;
-  height: 10vh;
-  opacity: 0.7;
   z-index: 2; /* devant l’image */
+  display: flex;
+  justify-content: center; /* centre horizontalement le titre */
+  align-items: center; /* ajuste verticalement si besoin */
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translate(-50%, -50%); /* animation initiale : glisse du haut */
 }
-
 
 /* État initial : décalé vers le bas et transparent */
 .background,
@@ -486,25 +514,42 @@ footer  p{
 /* État final : en place et visible */
 .show .background,
 .show #title-contact {
-  transform: translateY(0);
+  transform: translate(-50%, -50%);
   opacity: 1;
 }
 
 
 /* Titre au-dessus de tout */
 #title-contact {
-  width: 350px;
   position: absolute;
-  top: 270px; /* pour qu’il apparaisse sur le fond gris */
-  left: 40%;
-  font-size: 2.5rem;
-  transform: translateX(-50%);
+  top: 50%; /* milieu de l'image */
+  left: 50%;
+  transform: translate(-50%, -50%); 
   text-align: center;
   font-family: Unna;
-  font-size: bold;
+  font-size: 2.8rem;
+  font-weight: bold;
   color: white;
   z-index: 3; /* au-dessus du fond gris */
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translateY(-50%);
+  max-width: 90%;/* évite de dépasser l’écran */
 }
+
+.contact_img {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover; /* pour que l’image couvre bien toute la zone */
+  display: block; /* pour éviter un petit espace en dessous */
+  z-index: 1; /* tout en dessous */
+  top: 0;
+  box-shadow: 20px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ! FIN SECTION UPPER CONTACT */
+
 
 /* SECTION CONTACT */
 .coordonnées {
