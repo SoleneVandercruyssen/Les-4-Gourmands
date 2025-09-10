@@ -649,8 +649,6 @@ body {
   font-size: 2.5rem;
 }
 
-/* Animation pour que le contenu glisse/devient visible lors du défilement de la page */
-
 
 /* ! FOOTER  = BAS DE PAGE */
 
@@ -671,14 +669,14 @@ footer ul {
     padding: 0;
   }
   
-footer li {
+  footer li {
     list-style: none;
     display: inline-block;
     margin-right: 20px;
     width: 100%;
   }
 
-footer li a {
+  footer li a {
     width: 100%;
     text-decoration: none;
     color: white;
@@ -702,7 +700,6 @@ footer li a {
 /* DIV placer à gauche */
 .liens_footer{
   width: 70%;
-  /* margin-right: 2%; */
 }
 
 /* DIV placer à droite */
