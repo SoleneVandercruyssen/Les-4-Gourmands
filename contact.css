@@ -109,7 +109,7 @@ header {
 
 /* Animation au survol */
 .nav ul li a:active {
-    color: #AB3428;
+    color: #66553B;
 }
 
 /* Quand le menu est actif */
@@ -148,7 +148,7 @@ header {
   left: 50%;
   width: 90%;
   height: 12vh;
-  background-color: grey;
+  background-color: #66553B;
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -213,7 +213,7 @@ header {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #66553B;
   border-radius: 8px;
   margin-top: 5%;
 }
@@ -242,7 +242,7 @@ header {
 .heures{
   font-family: Unna;
   font-size: 1.2rem;
-  color: #AB3428;
+  color: #FFFFFF;
   margin-bottom: 2%;
   display: flex;
   justify-content: center;
@@ -252,7 +252,7 @@ header {
 /* NUMERO DE TELEPHONE */
 .tel{
   font-size: bolder;
-  color: #AB3428;
+  color: #FFFFFF;
   font-family: Encode;
   font-size: 1.8rem;
   margin-top: 10%;
@@ -269,13 +269,17 @@ header {
   width: 90%;
   margin: 20px auto;
   padding: 20px;
-  background-color: #989898;
+  background-color: #66553B;
   border-radius: 8px;
 
 ul {
   margin-left: 15%;
   margin-top: 5%;
   padding: 0;
+}
+
+li{
+  color: #FFFFFF;
 }
 }
 
@@ -285,14 +289,14 @@ ul {
   width: 90%;
   margin: 20px auto;
   padding: 20px;
-  background-color: #989898;
+  background-color: #66553B;
   border-radius: 8px;
 }
 
 /* TITRE */
 h2{
   position: relative;
-  color: #AB3428;
+  color: #FFFFFF;
   font-family: Unna, sans-serif;
   font-size: 1.5rem;
   margin-bottom: 2%;

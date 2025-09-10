@@ -114,7 +114,7 @@ header {
 
 
 .nav ul li a:active {
-    color: #AB3428;
+    color: #66553B;
 }
 
 /*! Section contact-upper */
@@ -136,7 +136,7 @@ header {
   left: 50%;
   width: 90%;
   height: 12vh;
-  background-color: grey;
+  background-color: #66553B;
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -216,7 +216,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
-  background-color: #AB3428;
+  background-color: #66553B;
 }
 
 .section-plats{
@@ -224,7 +224,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
-  background-color: #989898;
+  background-color: #66553B;
 }
 
 
@@ -463,7 +463,7 @@ footer  p{
     }
 
     .nav ul li a:hover {
-      color: #AB3428;
+      color: #66553B;
     }
 
 /* ! CONTACT UPPER SECTION */
@@ -486,7 +486,7 @@ footer  p{
   left: 50%;
   width: 90%;
   height: 12vh;
-  background-color: grey;
+  background-color: #66553B;
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -566,7 +566,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
-  background-color: #AB3428;
+  background-color: #66553B;
 }
 
 .section-plats{
@@ -574,7 +574,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
-  background-color: #989898;
+  background-color: #66553B;
 }
 
 
@@ -690,7 +690,6 @@ footer ul {
 /* DIV placer à gauche */
 .liens_footer{
   width: 70%;
-  /* margin-right: 2%; */
 }
 
 /* DIV placer à droite */
