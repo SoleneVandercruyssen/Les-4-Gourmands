@@ -78,14 +78,14 @@
   function acceptCookies() {
     setCookie("cookies-choice", "accepted", 180);
     document.getElementById("cookie-banner").style.display = "none";
-    // Ici tu peux activer Google Analytics ou autres scripts
+    // Ici on peux activer Google Analytics ou autres scripts
     console.log("Cookies acceptés");
   }
 
   function refuseCookies() {
     setCookie("cookies-choice", "refused", 180);
     document.getElementById("cookie-banner").style.display = "none";
-    // Ici tu bloques Google Analytics ou autres scripts
+    // Ici on bloque Google Analytics ou autres scripts
     console.log("Cookies refusés");
   }
 

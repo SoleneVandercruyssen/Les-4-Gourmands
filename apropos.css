@@ -18,7 +18,7 @@
 
 :root {
     --grey: #989898;
-    --red: #AB3428;
+    --brown: #66553B;
 }
 
 @media screen and (min-width: 360px) and (max-width: 990px) {
@@ -94,7 +94,7 @@ header {
 
 /* Animation au survol */
 .nav ul li a:active {
-    color: #AB3428;
+    color: #66553B;
 }
 
 /* Quand le menu est actif */
@@ -136,7 +136,7 @@ header {
   left: 50%;
   width: 90%;
   height: 16vh;
-  background-color: grey;
+  background-color: #66553B;
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -201,7 +201,7 @@ header {
 .last{
   width: 100%;
   height: 100%;
-  background-color: #AB3428;
+  background-color: #66553B;
   color: white;
 }
 
@@ -364,7 +364,7 @@ footer  p{
     }
 
     .nav ul li a:hover {
-      color: #AB3428;
+      color: #66553B;
     }
 
 
@@ -386,7 +386,7 @@ footer  p{
   left: 50%;
   width: 90%;
   height: 12vh;
-  background-color: grey;
+  background-color: #66553B;
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -454,7 +454,7 @@ footer  p{
 .last{
   width: 100%;
   height: 100%;
-  background-color: #AB3428;
+  background-color: #66553B;
   color: white;
 }
 
@@ -473,7 +473,6 @@ footer ul {
     flex-direction: column;
     margin-left: 1%;
     justify-content: center;
-    /* align-items: center; */
     padding: 0;
   }
   
@@ -508,7 +507,6 @@ footer li a {
 /* DIV placer à gauche */
 .liens_footer{
   width: 70%;
-  /* margin-right: 2%; */
 }
 
 /* DIV placer à droite */
