@@ -1,41 +1,55 @@
 <!DOCTYPE html>
+  <!--  Déclaration du document HTML5, langue française. -->
 <html lang="fr">
 <head>
+      <!--Encodage UTF-8 et viewport responsive pour mobile. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Métadonnées pour le SEO (description, auteur, mots-clés). -->
     <meta name= "description" content="Les Quatre Gourmands">
     <meta name="type" content="site web">
     <meta name="keywords" content="boulangerie, pâtisseries, vienoiseries, gâteaux, pains, nourriture, Emmerin, gourmandises">
     <meta name="author" content="Solène Vandercruyssen">
-    <meta name="og:title" content="Les Quatre Gourmands">
+    <!-- Balises Open Graph (utilisées par Facebook et autres réseaux sociaux pour les aperçus de liens). -->
+    <meta property="og:title" content="Les Quatre Gourmands">
     <meta name="og:site_name" content="Les Quatre Gourmands">
     <meta name="og-url" content="">
+    <!-- Indique aux moteurs de recherche de ne pas indexer la page. -->
     <meta name="robots" content="noindex, nofollow">
+    <!-- Balise titre -->
     <title>Les Quatre Gourmands</title>
+    <!-- Lien du logo, se place dans la barre de navigation -->
     <link rel="icon" type="image/png" href="./src/images/logo.jpg">
+    <!-- lien vers le fichier style.css -->
     <link rel="stylesheet" href="style.css">
+    <!-- lien vers le fichier script.js -->
     <script type="module" src="./JS/script.js"></script>
 </head>
 
 <!-- ! Menu burger  -->
 <header>
+  <!-- div dotée d'un id nommé "flex" -->
     <div id="flex">
+      <!-- div dotée d'une class nommé "logo" -->
         <div class="logo">
+          <!-- image du logo -->
             <img src="./src/images/logo.jpg" alt="logo de l'entreprise" class="logo_img">
         </div>
     </div>
 
-    <!-- Bouton burger -->
+    <!-- ! Bouton burger -->
     <div class="burger-container" id="burger-btn">
         <div class="burger-line"></div>
         <div class="burger-line"></div>
         <div class="burger-line"></div>
     </div>
 
-    <!-- Menu -->
+    <!-- ! Menu -->
+    <!-- div dotée d'une class "nav" et d'un id "nav-menu" -->
     <div class="nav" id="nav-menu">
         <nav>
             <ul>
+              <!-- lien vers les pages -->
                 <li><a href="./index.html">Accueil</a></li>
                 <li><a href="./nosproduits.html">Nos Produits</a></li>
                 <li><a href="./contact.html">Contact</a></li>
@@ -44,6 +58,9 @@
         </nav>
     </div>
 </header>
+
+<!-- Fin du header -->
+
 
 <body>
 <!-- Bandeau Cookies -->
@@ -70,11 +87,20 @@
 <script>
   // Vérifie si un choix existe déjà
   window.onload = function() {
+  // Afficher le bandeau si aucun choix n'a été fait
     if (!getCookie("cookies-choice")) {
+      // Afficher le bandeau
       document.getElementById("cookie-banner").style.display = "block";
     }
   }
 
+  /*
+  * @param function pour la Gestion des boutons
+  * Accepter : enregistre le choix et masque le bandeau
+  * Refuser : enregistre le choix et masque le bandeau
+  * Personnaliser : ouvre la fenêtre de préférences
+  * Enregistrer : sauvegarde les préférences et masque les fenêtres
+  */ 
   function acceptCookies() {
     setCookie("cookies-choice", "accepted", 180);
     document.getElementById("cookie-banner").style.display = "none";
@@ -83,23 +109,31 @@
   }
 
   function refuseCookies() {
+    //  
     setCookie("cookies-choice", "refused", 180);
+    // Masquer le bandeau
     document.getElementById("cookie-banner").style.display = "none";
     // Ici on bloque Google Analytics ou autres scripts
     console.log("Cookies refusés");
   }
 
+  //  Ouvre la fenêtre de préférences
   function openPreferences() {
+    // Masquer le bandeau
     document.getElementById("cookie-preferences").style.display = "block";
   }
 
+  // Sauvegarde les préférences
   function savePreferences() {
+    // Récupérer les choix de l'utilisateur et les enregistrer dans un cookie JSON 
     let analytics = document.getElementById("analytics-cookies").checked;
     let social = document.getElementById("social-cookies").checked;
     let prefs = { analytics: analytics, social: social };
     setCookie("cookies-choice", JSON.stringify(prefs), 180);
+    // Masquer les fenêtres
     document.getElementById("cookie-preferences").style.display = "none";
     document.getElementById("cookie-banner").style.display = "none";
+    // Ici on active ou bloque les scripts en fonction des préférences
     console.log("Préférences sauvegardées :", prefs);
   }
 
@@ -124,6 +158,13 @@
 </script>
 <main> 
 
+  <!-- Présentation de la boulangerie
+        Image d’ambiance
+        Titre de bienvenue
+        Texte de présentation
+        Bouton "Voir nos produits"
+        Texte d’ambiance pour attirer le client
+        Section contact rapide avec numéro de téléphone. -->
 
 <section class="home_upper">
 <div class="home">
@@ -131,16 +172,16 @@
 <h1 id="title-home">Bienvenue à la Boulangerie Les Quatre Gourmands à Emmerin !</h1>
 <div class="background"></div>
 </div>
-
 </section>
 
-
-<section class="text reveal" >
+<section class="text reveal">
 <p class="alignement text"> Au cœur du village d'Emmerin, la Boulangerie<strong> Les Quatre Gourmands </strong> est bien plus qu'un simple commerce de quartier : c'est une adresse de <strong>confiance, conviviale et généreuse</strong>, où chaque client est accueilli avec le sourire.</p>
 <br>
 <p class="alignement text">Ici, le bon goût est une priorité. <strong> Pains traditionnels, baguettes croustillantes, viennoiseries dorées, pâtisseries maison et petites gourmandises salées… </strong> tout est fabriqué sur place avec passion et savoir-faire. <strong> Chaque jour </strong>, notre équipe s'engage à vous proposer des produits frais, faits maison et élaborés avec des ingrédients de qualité.</p>
 </section>
 
+
+<!-- Produits avec visuels (pains, viennoiseries, pâtisseries, plats) -->
 <section class="home_section reveal">
     <p class="text" >Nous vous invitons à découvrir notre large gamme de produits : pains, viennoiseries, pâtisseries, et bien plus encore. Chaque produit est préparé avec soin pour vous offrir une expérience gustative inoubliable.</p>
 
@@ -160,6 +201,13 @@
 </section>
 
 <br>
+
+
+<!-- 
+Texte d’ambiance pour attirer le client 
+Section contact rapide avec numéro de téléphone. 
+-->
+
 
 <p class="text">  Que ce soit pour le petit-déjeuner ou une pause gourmande, <strong> il y a toujours une bonne raison de pousser la porte de la boulangerie Les Quatre Gourmands.</strong> Et si vous ne savez pas quoi choisir… laissez-vous guider par l'odeur du four ou les conseils de notre équipe, toujours à l'écoute ! </p>
 <br>
