@@ -14,8 +14,6 @@
     <meta property="og:title" content="Les Quatre Gourmands">
     <meta name="og:site_name" content="Les Quatre Gourmands">
     <meta name="og-url" content="">
-    <!-- Indique aux moteurs de recherche de ne pas indexer la page. -->
-    <meta name="robots" content="noindex, nofollow">
     <!-- Balise titre -->
     <title>Les Quatre Gourmands</title>
     <!-- Lien du logo, se place dans la barre de navigation -->
@@ -28,9 +26,7 @@
 
 <!-- ! Menu burger  -->
 <header>
-  <!-- div dotée d'un id nommé "flex" -->
     <div id="flex">
-      <!-- div dotée d'une class nommé "logo" -->
         <div class="logo">
           <!-- image du logo -->
             <img src="./src/images/logo.jpg" alt="logo de l'entreprise" class="logo_img">
@@ -139,20 +135,31 @@
 
   // Fonctions utilitaires cookies
   function setCookie(name, value, days) {
+    // Crée un cookie avec un nom, une valeur et une durée en jours
     let d = new Date();
+    // Le cookie expire dans 'days' jours
     d.setTime(d.getTime() + (days*24*60*60*1000));
+    // expiration en format UTC
     let expires = "expires="+ d.toUTCString();
+    // Définit le cookie
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
   }
 
   function getCookie(name) {
+    // Récupère la valeur d'un cookie par son nom
     let cname = name + "=";
+    // decodeURIComponent pour gérer les caractères spéciaux
     let decodedCookie = decodeURIComponent(document.cookie);
+    // Sépare les cookies
     let ca = decodedCookie.split(';');
+    // boucle pour trouver le cookie
     for(let i=0; i<ca.length; i++) {
+      // Trim les espaces
       let c = ca[i].trim();
+      // Vérifie si le cookie commence par le nom recherché
       if (c.indexOf(cname) == 0) return c.substring(cname.length, c.length);
     }
+    // Si le cookie n'existe pas, retourne une chaîne vide
     return "";
   }
 </script>
@@ -187,11 +194,11 @@
 
 <div class="home_section_content">
     <div class="home_section_images">
-    <img src="./src/images/patisserie-1.jpg"   alt="image de pâtisseries" class="card_img">
-    <img src="./src/images/vienoiseries-1.jpg" alt="image de viennoiseries" class="card_img">
+    <img src="./src/images/pâtisserie-4.jpg"   alt="image de pâtisseries" class="card_img">
+    <img src="./src/images/20250903_065838.jpg" alt="image de viennoiseries" class="card_img">
     </div>
         <div class="home_section_images">
-            <img src="./src/images/pain-1.jpg" alt="image de pains" class="card_img">
+            <img src="./src/images/pains au chocolat.jpg" alt="image de pains" class="card_img">
             <img src="./src/images/plat-1.jpg" alt="image de plat" class="card_img">
         </div>
 </div>
@@ -211,7 +218,7 @@ Section contact rapide avec numéro de téléphone.
 
 <p class="text">  Que ce soit pour le petit-déjeuner ou une pause gourmande, <strong> il y a toujours une bonne raison de pousser la porte de la boulangerie Les Quatre Gourmands.</strong> Et si vous ne savez pas quoi choisir… laissez-vous guider par l'odeur du four ou les conseils de notre équipe, toujours à l'écoute ! </p>
 <br>
-<p class="text"> <strong> Facile d'accès</strong>et située à deux pas de la mairie, la boulangerie est un lieu de passage incontournable pour les habitants du village comme pour les visiteurs de passage. </p>
+<p class="text"> <strong> Facile d'accès</strong> et située à deux pas de la mairie, la boulangerie est un lieu de passage incontournable pour les habitants du village comme pour les visiteurs de passage. </p>
 
 <p class="text">  Alors n'attendez plus, venez nous rendre visite et découvrir par vous-même pourquoi la <strong>Boulangerie Les Quatre Gourmands</strong> est devenue un incontournable à Emmerin. Nous avons hâte de vous accueillir et de partager avec vous notre passion pour la boulangerie artisanale !</p>
 
