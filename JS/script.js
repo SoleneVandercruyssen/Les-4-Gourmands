@@ -34,61 +34,24 @@ document.querySelectorAll('.home, .produits, .contact, .apropos').forEach(sectio
 });
 
 
-
-
-// // Slider
-// let currentSlide = 0;
-
-// // Sélection de toutes les sections qui contiennent un slider
-// document.querySelectorAll("section").forEach(section => {
-//     const images = section.querySelectorAll(".image-apropos");
-//     // Le premier et le dernier enfant sont sélectionnés pour les boutons de navigation
-//     // On suppose que les boutons sont dans une div avec la classe "button-controls"
-//     const prevBtn = section.querySelector(".button-controls button:first-child");
-//     const nextBtn = section.querySelector(".button-controls button:last-child");
-
-//     // L’index (position) de l’image actuellement visible dans CETTE section
-//     let index = 0;
-// /**
-//  * Ici on affiche la diapositive correspondante à l'index donné
-//  * @param {number} i - L'index de l'image à afficher
-//  * On utilise une fonction pour parcourir toutes les images et afficher uniquement celle qui correspond à l'index
-//  * @returns {void}
-//  */
-//     function showSlide(i) {
-//         // On fait une boucle pour parcourir toutes les images 
-//         // et on affiche uniquement celle qui correspond à l'index
-//         images.forEach((img, idx) => {
-//             img.style.display = idx === i ? "block" : "none";
-//         });
-//     }
-
-//     // Initialisation
-//     showSlide(index);
-//     setInterval(nextSlide, 5000); // Change de diapositive toutes les 5 secondes
-//     prevBtn.addEventListener("click", () => {
-//         index = (index - 1 + images.length) % images.length;
-//         showSlide(index);
-//     });
-
-//     nextBtn.addEventListener("click", () => {
-//         index = (index + 1) % images.length;
-//         showSlide(index);
-//     });
-// });
-
 // Slider
 document.querySelectorAll("section").forEach(section => {
     const images = section.querySelectorAll(".image-apropos");
     const prevBtn = section.querySelector(".button-controls button:first-child");
     const nextBtn = section.querySelector(".button-controls button:last-child");
 
+    // boucle de sécurité au cas où une section n'a pas de slider
     if (images.length === 0) return; // ignore les sections sans slider
-
+    // index de l'image actuelle
     let index = 0;
 
+    /**
+     *  Fonction pour afficher l'image à l'index donné
+     *  @param {number} i - Index de l'image à afficher
+    */
     function showSlide(i) {
         images.forEach((img, idx) => {
+            // Montre l'image si son index correspond, sinon la cache
             img.style.display = idx === i ? "block" : "none";
         });
     }
@@ -98,68 +61,32 @@ document.querySelectorAll("section").forEach(section => {
 
     // Changement automatique toutes les 5 secondes
     setInterval(() => {
+        // passe à l'image suivante, boucle si nécessaire
         index = (index + 1) % images.length;
         showSlide(index);
-    }, 5000);
+    },
+    // intervalle en millisecondes
+    5000);
 
-    // Navigation manuelle
+    // si les boutons existent, ajoute les écouteurs d'événements
     if (prevBtn) {
         prevBtn.addEventListener("click", () => {
+            // retourne à l'image précédente, boucle si nécessaire
             index = (index - 1 + images.length) % images.length;
             showSlide(index);
         });
     }
 
+    // même chose pour le bouton suivant
     if (nextBtn) {
         nextBtn.addEventListener("click", () => {
+            // passe à l'image suivante, boucle si nécessaire
             index = (index + 1) % images.length;
             showSlide(index);
         });
     }
 });
 
-
-
-
-// Code pour un slider simple (non utilisé ici)
-// let currentSlide = 0;
-// const slides = document.querySelectorAll('.image-slider img');
-// function showSlide(index) {
-//     slides.forEach((slide, i) => {
-//         slide.style.display = (i === index) ? 'block' : 'none';
-//     });
-// }
-// function nextSlide() {
-//     currentSlide = (currentSlide + 1) % slides.length;
-//     showSlide(currentSlide);
-// }
-// function prevSlide() {
-//     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-//     showSlide(currentSlide);
-// }
-// Affiche la première diapositive au chargement
-// window.addEventListener('load', () => {
-//     showSlide(currentSlide);
-// }); 
-
-
-// Animation au scroll
-const revealElements = document.querySelectorAll('.reveal');
-const options = {
-    threshold: 0.1 // Pourcentage de l'élément visible avant de déclencher l'animation
-};
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active'); // Ajoute la classe 'active' pour déclencher l'animation
-            observer.unobserve(entry.target); // Arrête d'observer l'élément une fois l'animation déclenchée
-        }
-    });
-}, options);
-revealElements.forEach(el => {
-    observer.observe(el); // Observe chaque élément avec la classe 'reveal'
-});
-// Fin animation au scroll
 
 
 
