@@ -19,6 +19,7 @@ navLinks.forEach(link => {
 });
 // Ferme le menu si on clique en dehors
 document.addEventListener('click', (event) => {
+    // Vérifie si le clic est en dehors du menu et du bouton burger
     if (!burgerBtn.contains(event.target) && !navMenu.contains(event.target)) {
         navMenu.classList.remove('active'); // Enlève la classe "active"
     }
@@ -86,8 +87,3 @@ document.querySelectorAll("section").forEach(section => {
         });
     }
 });
-
-
-
-
-
