@@ -18,7 +18,7 @@
 
 :root {
     --grey: #989898;
-    --red: #AB3428;
+    --brown: #66553B;
 }
 
 body {
@@ -115,7 +115,7 @@ header {
 
 
 .nav ul li a:active {
-    color: #66553B;
+    color: var(--brown);
 }
 
 /*! Section contact-upper */
@@ -137,7 +137,7 @@ header {
   left: 50%;
   width: 90%;
   height: 12vh;
-  background-color: #66553B;
+  background-color: var(--brown);
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -217,7 +217,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
-  background-color: #66553B;
+  background-color: var(--brown);
 }
 
 .section-plats{
@@ -225,7 +225,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
-  background-color: #66553B;
+  background-color: var(--brown);
 }
 
 
@@ -464,7 +464,7 @@ footer  p{
     }
 
     .nav ul li a:hover {
-      color: #66553B;
+      color: var(--brown);
     }
 
 /* ! CONTACT UPPER SECTION */
@@ -487,7 +487,7 @@ footer  p{
   left: 50%;
   width: 90%;
   height: 12vh;
-  background-color: #66553B;
+  background-color: var(--brown);
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -567,7 +567,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
-  background-color: #66553B;
+  background-color: var(--brown);
 }
 
 .section-plats{
@@ -575,7 +575,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
-  background-color: #66553B;
+  background-color: var(--brown);
 }
 
 

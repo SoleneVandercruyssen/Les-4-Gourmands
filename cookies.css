@@ -120,7 +120,7 @@ header {
 
 /* Animation au survol */
 .nav ul li a:active {
-    color: #66553B;
+    color: var(--brown);
 }
 
 h2{
@@ -291,7 +291,7 @@ footer  p{
     }
 
     .nav ul li a:hover {
-      color: #66553B;
+      color: var(--brown);
     }
 
 /* ! FOOTER  = BAS DE PAGE */

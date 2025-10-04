@@ -123,7 +123,7 @@ header {
 
 
 .nav ul li a:active {
-    color: #66553B;
+    color: var(--brown);
 }
 
 h1{
@@ -300,7 +300,7 @@ footer  p{
     }
 
     .nav ul li a:hover {
-      color: #66553B;
+      color: var(--brown);
     }
 
 

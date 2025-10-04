@@ -20,7 +20,7 @@
 
 :root {
     --grey: #989898;
-    --red: #AB3428;
+    --brown: #66553B;
 }
 
 body {
@@ -110,7 +110,7 @@ header {
 
 /* Animation au survol */
 .nav ul li a:active {
-    color: #66553B;
+    color: var(--brown);
 }
 
 /* Quand le menu est actif */
@@ -149,7 +149,7 @@ header {
   left: 50%;
   width: 90%;
   height: 10vh;
-  background-color: #66553B;
+  background-color: var(--brown);
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -214,7 +214,7 @@ header {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #66553B;
+  background-color: var(--brown);
   border-radius: 8px;
   margin-top: 5%;
 }
@@ -270,7 +270,7 @@ header {
   width: 90%;
   margin: 20px auto;
   padding: 20px;
-  background-color: #66553B;
+  background-color: var(--brown);
   border-radius: 8px;
 
 ul {
@@ -287,7 +287,7 @@ ul {
   width: 90%;
   margin: 20px auto;
   padding: 20px;
-  background-color: #66553B;
+  background-color: var(--brown);
   border-radius: 8px;
 }
 
@@ -470,7 +470,7 @@ footer  p{
     }
 
     .nav ul li a:hover {
-      color: #66553B;
+      color: var(--brown);
     }
 
 
@@ -494,7 +494,7 @@ footer  p{
   left: 50%;
   width: 90%;
   height: 12vh;
-  background-color: #66553B;
+  background-color: var(--brown);
   box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.2);
   z-index: 2; /* devant l’image */
   display: flex;
@@ -559,7 +559,7 @@ footer  p{
   width: 90%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #66553B;
+  background-color: var(--brown);
   border-radius: 8px;
   margin-top: 5%;
 }
@@ -625,7 +625,7 @@ p{
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 20px;
-  background-color: #66553B;
+  background-color: var(--brown);
   border-radius: 8px;
 
 ul {
@@ -649,7 +649,7 @@ ul {
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 20px;
-  background-color: #66553B;
+  background-color: var(--brown);
   border-radius: 8px;
 }
 
