@@ -155,11 +155,11 @@ header {
   box-shadow: 0 -2px 6px rgba(0,0,0,0.1); 
   z-index: 9999; 
   display: none;
+}
 
-  p{
-    margin: 0 0 10px 0; 
-    font-size: 14px;
-  }
+#cookie-banner p {
+  margin: 0 0 10px 0; 
+  font-size: 14px;
 }
 
 #cookie-preferences{
@@ -517,11 +517,11 @@ body {
   box-shadow: 0 -2px 6px rgba(0,0,0,0.1); 
   z-index: 9999; 
   display: none;
+}
 
-  p{
-    margin: 0 0 10px 0; 
-    font-size: 14px;
-  }
+#cookie-banner p {
+  margin: 0 0 10px 0; 
+  font-size: 14px;
 }
 
 #cookie-preferences{
@@ -541,16 +541,6 @@ body {
     margin-top:0;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* ! CONTACT UPPER SECTION */
