@@ -422,7 +422,86 @@ footer  p{
 }
 }
 
-@media screen and (min-width: 991px) and (max-width: 1990px) {
+
+/* ! VERSION TABLETTE */
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+ body {
+    font-family: Unna, sans-serif;
+    font-size: 1.2rem;
+    background-color: white;
+  }
+
+  /* HEADER */
+  header {
+    position: relative;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+  }
+
+  .logo_img {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Burger menu (affiché jusqu’à 990px) */
+  .burger-container {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    background: none;
+    position: static;
+    height: auto;
+    width: auto;
+  }
+
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav ul li a:hover {
+    color: var(--brown);
+  }
+
+  /* IMAGE D’ACCUEIL */
+  .home_img {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .background {
+    width: 80%;
+    height: 18vh;
+  }
+
+  #title-produits {
+    font-size: 2.5rem;
+    max-width: 80%;
+  }
+}
+
+
+
+/* !Version Desktop */
+
+@media screen and (min-width: 991px) {
   body{
     width: 100%;
     height: 100vh;

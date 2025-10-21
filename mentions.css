@@ -28,7 +28,7 @@ body {
   background-color: white;
 }
 
-
+/* ! Version mobile */
 @media screen and (min-width: 360px) and (max-width: 990px) {
 
 .logo_img {
@@ -263,7 +263,68 @@ footer  p{
 
 }
 
-@media screen and (min-width: 991px) and (max-width: 1990px) {
+
+/* ! Version tablette */
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+ body {
+    font-family: Unna, sans-serif;
+    font-size: 1.2rem;
+    background-color: white;
+  }
+
+  /* HEADER */
+  header {
+    position: relative;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+  }
+
+  .logo_img {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Burger menu (affiché jusqu’à 990px) */
+  .burger-container {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    background: none;
+    position: static;
+    height: auto;
+    width: auto;
+  }
+
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav ul li a:hover {
+    color: var(--brown);
+  }
+}
+
+
+
+/* ! Version desktop */
+
+@media screen and (min-width: 991px) {
 .logo_img {
       margin-left: 2%;
       width: 50px;

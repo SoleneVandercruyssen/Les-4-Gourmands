@@ -300,7 +300,7 @@ header {
   transform: scale(1.05);
 } 
 
-.button_produit{
+.home_section_button button{
   position: relative;
   left: 30%;
   width: 150px;
@@ -313,6 +313,10 @@ header {
   padding: 8px;
 }
 
+.home_section_button a{
+  text-decoration: none;
+  color: white;
+}
 /* ! SECTION CONTACT */
 .home-contact{
   width: 100%;
@@ -447,6 +451,211 @@ footer  p{
   font-size: 0.8rem;
 }
 }
+
+
+
+/* ! VERSION TABLETTE */
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+
+  body {
+    font-family: Unna, sans-serif;
+    font-size: 1.2rem;
+    background-color: white;
+  }
+
+  /* HEADER */
+  header {
+    position: relative;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+  }
+
+  .logo_img {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Burger menu (affiché jusqu’à 990px) */
+  .burger-container {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    background: none;
+    position: static;
+    height: auto;
+    width: auto;
+  }
+
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav ul li a:hover {
+    color: var(--brown);
+  }
+
+  /* IMAGE D’ACCUEIL */
+  .home_img {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #title-home {
+    font-size: 2.2rem;
+  }
+
+  .background {
+    width: 80%;
+    height: 18vh;
+  }
+
+  /* SECTION TEXTE */
+  .text {
+    padding: 5%;
+    font-size: 1.2rem;
+  }
+
+  /* SECTION IMAGES */
+  .home_section {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--brown);
+    padding: 4% 2%;
+  }
+
+  .home_section_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4%;
+    height: auto;
+  }
+
+  .home_section_images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    flex-wrap: wrap;
+  }
+
+  .home_section_button{
+    margin-top: 5%;
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+.home_section_button button{
+    position: relative;
+    left: 0%;
+  }
+
+
+.button_produit:active {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+  .card_img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3%;
+  }
+
+  button {
+    display: block;
+    width: 200px;
+    height: 45px;    
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* SECTION CONTACT */
+  .home-contact {
+    height: 25vh;
+    background-color: var(--brown);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-contact p {
+    font-size: 1.3rem;
+  }
+
+  .tel {
+    font-size: 1.8rem;
+  }
+
+  /*! FOOTER */
+  footer {
+    background-color: black;
+    color: white;
+    padding: 3%;
+    font-size: 1rem;
+  }
+
+  #mirror {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .liens_footer, .copyright {
+    width: 45%;
+  }
+
+  .face-to-face, .droite {
+    margin: 2% 0;
+    display: flex;
+    align-items: center;
+  }
+
+  #phone, #facebook, #email {
+    width: 30px;
+    height: 30px;
+  }
+
+  .copyright2 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+
+/* ! Version tablette */
+
+
 
 
 /*! Version desktop */
@@ -672,10 +881,9 @@ body {
   transform: scale(1.05);
 }
 
-.button_produit{
+.home_section_button button{
   width: 240px;
   height: 50px;
-  /* padding: 1%; */
   border-radius: 20px;
   background-color: black;
   color: white;
@@ -686,8 +894,13 @@ body {
   cursor: pointer;
 }
 
+.home_section_button a{
+  text-decoration: none;
+  color: white;
+}
+
+
 .button_produit:hover {
-  background-color: white;
   color: var(--brown);
   text-decoration: none;
   transition: background 0.3s ease;
