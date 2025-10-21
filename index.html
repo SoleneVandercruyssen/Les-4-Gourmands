@@ -27,7 +27,6 @@
 <body>
 
 
-
   <!-- ! Menu burger  -->
 <header>
     <div id="flex">
@@ -102,6 +101,7 @@
   * Enregistrer : sauvegarde les préférences et masque les fenêtres
   */ 
   function acceptCookies() {
+    // Enregistre le choix dans un cookie
     setCookie("cookies-choice", "accepted", 180);
     document.getElementById("cookie-banner").style.display = "none";
     // Ici on peux activer Google Analytics ou autres scripts
